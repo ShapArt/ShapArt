@@ -3,7 +3,7 @@
 > [!TIP]
 > Я — студент ИУ8 (ИБ) МГТУ им. Баумана → SOC L1 / Junior Pentester / DevOps-база. Люблю проекты «от идей до метрик»: автоматизация, ИБ, боты, встраиваемые системы.
 
-![focus](https://img.shields.io/badge/role-SOC_L1_%2F_Jr.Pentest-blue)
+![focus](https://img.shields.io/badge/focus-SOC_L1_%2F_Jr.Pentest-blue)
 ![focus](https://img.shields.io/badge/focus-Blue%2FRed%2FDevOps-1f6feb)
 ![langs](https://img.shields.io/badge/langs-RU%2FEN-5f9ea0)
 ![status](https://img.shields.io/badge/open_to-Internship%20%2F%20Part--time-brightgreen)
