@@ -1,78 +1,45 @@
-# 🛰️ ShapArt — Артём Шаповалов (Тёмыч)
+﻿# 🛰️ ShapArt — Артём Шаповалов
 
-> [!TIP]
-> Я — студент ИУ8 (ИБ) МГТУ им. Баумана → SOC L1 / Junior Pentester / DevOps-база. Люблю проекты «от идей до метрик»: автоматизация, ИБ, боты, встраиваемые системы.
+Automation engineer / bot builder / media tools. Люблю проекты «от идеи до метрик»: FastAPI-шлюзы, Telegram-боты, CV/медиа-пайплайны, CI/CD и секьюрная поставка.
 
-![focus](https://img.shields.io/badge/focus-SOC_L1_%2F_Jr.Pentest-blue)
-![focus](https://img.shields.io/badge/focus-Blue%2FRed%2FDevOps-1f6feb)
-![langs](https://img.shields.io/badge/langs-RU%2FEN-5f9ea0)
-![status](https://img.shields.io/badge/open_to-Internship%20%2F%20Part--time-brightgreen)
+![focus](https://img.shields.io/badge/focus-Automation%20%7C%20Bots%20%7C%20Media-1f6feb)
+![langs](https://img.shields.io/badge/langs-RU%20%7C%20EN-5f9ea0)
+![status](https://img.shields.io/badge/open_to-remote%20side%20%2F%20intern-brightgreen)
 ![contact](https://img.shields.io/badge/Telegram-@shapart-2CA5E0?logo=telegram)
 
----
+## ⚡ Быстрые факты
+- Боты/интеграции на aiogram + FastAPI, умею работать с очередями, платежами и тонкими rate-limit.
+- CV/медиа-инструменты: OpenCV, ffmpeg.wasm, Canvas/Workers; bias по лицам/салиентности; приватность на клиенте.
+- Self-host: MinIO (presigned), Postgres, Docker Compose; умею закрывать S3 ACL/TTL и прокидывать Gateway.
+- CI/CD: GitHub Actions, pre-commit, gitleaks; минимальные permissions, секреты только из secrets.
+- WebRTC/E2EE дизайн: сигнальные ключи, ICE/STUN/TURN, threat models для приватных чатов.
 
-## 🔭 TL;DR
-- 🛡️ **SOC/Blue**: лог-парсинг, триаж, базовый IR; MITRE ATT&CK (база); ELK/Wazuh.
-- 🗺️ **Red/Pentest**: recon/OSINT, OWASP Top-10; Burp, nmap/ffuf/nuclei; отчётность.
-- ⚙️ **Dev**: Python/FastAPI/Aiogram, Docker/Compose, PostgreSQL/SQLCipher, Nginx, MicroPython, OpenCV/GoCV.
-- 📊 **Автоматизации**: PowerAutomate/PowerBI, Tampermonkey; −1 час/день рутины на реальных задачах.
+## 🧭 Что умею
+- Проектировать Telegram-боты (aiogram) с SLA/платежами/лимитами, в т.ч. одноступенчатые Actions-раскатки.
+- Поднимать FastAPI-шлюзы с выдачей presigned URL в MinIO и ACL/role-моделью.
+- Строить медиа UI/CLI: ffmpeg.wasm на клиенте, yt-dlp очереди, PWA с оффлайн-режимом.
+- Делать CV-пайплайны: детекция лиц/салиентности (OpenCV), пакетные обработчики и CLI.
+- Настраивать GitHub Actions под матрицы (Py 3.11/3.12, Node LTS), artifacts и честный continue-on-error.
+- Держать безопасность: gitleaks + pre-commit, секреты только через GitHub Secrets, без .env в коммитах.
 
----
+## 🧪 Технологии
+Python • FastAPI • aiogram • OpenCV • ffmpeg.wasm • GitHub Actions • Docker/Compose • MinIO • Postgres • WebRTC • GraphQL/REST • Redis • pytest/vitest
 
-## 🧭 Проекты-вывески 
-> [!NOTE]
-> Ниже — из открытых реп. Демо-скрины/диаграммы и «быстрый старт» в README каждого. Бейджи — через Shields.io, статус CI — стандартный GitHub Actions badge. :contentReference[oaicite:1]{index=1}
+## 🎛️ Витрина проектов
+- `outlook-exporter` — CLI+UI экспорт Outlook/Graph, моки Graph в тестах, PyInstaller хуки, безопасный SEND режим.
+- `vpn-bot-stars-hiddify` — Stars/XTR биллинг-бот, Hiddify/Xray, deploy_ssh.ps1, диаграмма потоков.
+- `tg-media-downloader-bot` — yt-dlp очереди/квоты, анти-абуз, предупреждения о размере Telegram.
+- `media-compressor-web` — ffmpeg.wasm компрессор видео/аудио, Canvas для изображений, PWA/drag’n’drop.
+- `image-cover-cropper` — умный кроппер обложек с face/saliency bias, пресеты соцсетей + batch.
+- `selfhost-cloud` — FastAPI ↔ MinIO gateway с ACL/TTL, docker-compose и примеры presigned загрузок.
+- `cases-and-achievements` — портфолио кейсов/метрик с демо и витриной артефактов.
 
-### 👁️‍🗨️ EyeGate-L (СКУД «лицо+зрачки» на Luckfox)
-- **12–18 FPS**, 1:1 ≈ **120–250 мс**, **TPR@FAR=1e-3 ≈ 98–99%** (учебный стенд).
-- MicroPython (GPIO/реле), UI на Go (план), SQLCipher, systemd; IR-подсветка, безопасное питание.
-- Репозиторий: `eyegate-l-luckfox-scud`
+## 🔁 Автосинк (локально)
+- PowerShell: `./sync-all.ps1 -CreateMissing` — pre-commit → gitleaks --redact → git add/commit → push всех реп внутри `Projects/`.
+- Bash (WSL): `bash sync-all.sh` — те же шаги, матрица реп находит по подпапкам.
+- Перед пушем: ставлю pre-commit & gitleaks локально, секреты только через GitHub Secrets. Social preview лежит в `assets/social-preview/` для каждого репа.
 
-### 🛰️ VPN-бот c XTR (Stars) и анти-DPI протоколами
-- Автовыдача ключей/QR, напоминания, метрики (аптайм/латентность).
-- Hiddify/Xray: VLESS-Reality, Hysteria2, TUIC (витрина без секретов).
-- Репозиторий: `vpn-bot-stars-hiddify` *(витринный код, без приватного конфига)*
-
-### 🗜️ CLI-компрессор фото
-- Массовое сжатие, EXIF/ICC, HEIC→JPEG, ограничение по длинной стороне, параллелизм.
-- Репозиторий: `compress-photos-cli`
-
-### 🧲 Кроппер обложек (saliency/face-bias)
-- Умное центрирование важных объектов, пресеты под маркетплейсы/соцсети.
-- Репозиторий: `image-cover-cropper`
-
-### 🧪📊 DSP-лабы (CV/ML/NLP)
-- Чистая структура, отдельные requirements, готовые скрипты под запуск.
-- Репозиторий: `dsp-labs`
-
-### 🎵🗄️ УЧебная БД-система
-- Docker Compose, Postgres, схема/скрипты, демо-данные и запросы.
-- Репозиторий: `db-music-store`
-
----
-
-## 🧬 Технологии и инструменты
-**Языки**: Python, C/C++, Go (база), JS/TS (база)  
-**Бэкенд**: FastAPI, Aiogram, gRPC/REST (база)  
-**ИБ/Blue**: ELK/Wazuh, Windows Event/Nginx/Auth/Netflow, ATT&CK (база)  
-**DevOps**: Docker/Compose, Nginx, systemd, Git, GitHub Actions  
-**Данные**: PostgreSQL/SQLCipher, PowerBI, PowerAutomate  
-**Встраиваемые**: Luckfox (RV1106), MicroPython, OpenCV/GoCV, GPIO/IR/реле
-
----
-
-## 🧩 Что делаю сейчас / что дальше
-- 🔐📡 **Private Messenger** (E2EE, self-host): ключи, сессии, отложенные сообщения.  
-- 🎬🤖 **Kino-бот**: списки/рекомендации по TMDB/Кинопоиску, watch/seen, плагинные источники.  
-- 🎛️ **Web-компрессор** фото/видео (Canvas + ffmpeg.wasm, приватность на клиенте).  
-- ☁️🗝️ **Selfhost Cloud**: MinIO (S3) + presigned URL, TTL-ссылки, FastAPI-шлюз.  
-- ⬇️🤖 **TG-загрузчик медиа** по ссылкам (соблюдение ToS и rate-лимитов).
-
----
-
-## 📬 Контакты
-**Email**: sh4part@gmail.com  
-**Telegram**: @shapart  
-**GitHub**: github.com/ShapArt
-
----
+## 🤝 Контакты
+Email: sh4part@gmail.com  
+Telegram: [@shapart](https://t.me/shapart)  
+GitHub: https://github.com/ShapArt
