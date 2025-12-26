@@ -40,6 +40,6 @@ Python • FastAPI • aiogram • OpenCV • ffmpeg.wasm • GitHub Actions •
 - Перед пушем: ставлю pre-commit & gitleaks локально, секреты только через GitHub Secrets. Social preview лежит в `assets/social-preview/` для каждого репа.
 
 ## 🤝 Контакты
-Email: sh4part@gmail.com  
-Telegram: [@shapart](https://t.me/shapart)  
+Email: sh4part@gmail.com
+Telegram: [@shapart](https://t.me/shapart)
 GitHub: https://github.com/ShapArt
