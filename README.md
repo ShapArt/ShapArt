@@ -34,11 +34,6 @@ Python • FastAPI • aiogram • OpenCV • ffmpeg.wasm • GitHub Actions •
 - `selfhost-cloud` — FastAPI ↔ MinIO gateway с ACL/TTL, docker-compose и примеры presigned загрузок.
 - `cases-and-achievements` — портфолио кейсов/метрик с демо и витриной артефактов.
 
-## 🔁 Автосинк (локально)
-- PowerShell: `./sync-all.ps1 -CreateMissing` — pre-commit → gitleaks --redact → git add/commit → push всех реп внутри `Projects/`.
-- Bash (WSL): `bash sync-all.sh` — те же шаги, матрица реп находит по подпапкам.
-- Перед пушем: ставлю pre-commit & gitleaks локально, секреты только через GitHub Secrets. Social preview лежит в `assets/social-preview/` для каждого репа.
-
 ## 🤝 Контакты
 Email: sh4part@gmail.com
 Telegram: [@shapart](https://t.me/shapart)
