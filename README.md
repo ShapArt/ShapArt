@@ -7,6 +7,8 @@
   <img src="https://img.shields.io/badge/Focus-Backend%20%26%20Automation-success?style=for-the-badge" alt="focus">
 </p>
 
+![Social Preview](https://raw.githubusercontent.com/ShapArt/ShapArt/main/.github/social-preview.png)
+
 ## EN
 I design and ship backend-heavy products, automation services, and bot ecosystems that solve real operational problems.
 My approach: practical architecture, measurable outcomes, and maintainable delivery speed.
@@ -36,3 +38,5 @@ My approach: practical architecture, measurable outcomes, and maintainable deliv
 
 ## Contact / Контакт
 - GitHub: [@ShapArt](https://github.com/ShapArt)
+
+
