@@ -1,29 +1,25 @@
 <h1 align="center">ShapArt</h1>
-<p align="center"><strong>Backend & Automation Engineer</strong> · Product Systems · Practical Delivery</p>
+<p align="center"><strong>Backend & Automation Engineer</strong> · RU-first profile · Product delivery</p>
+
+![Social Preview](https://raw.githubusercontent.com/ShapArt/ShapArt/main/.github/social-preview.png)
 
 <p align="center">
   <a href="https://github.com/ShapArt?tab=followers"><img src="https://img.shields.io/github/followers/ShapArt?style=for-the-badge" alt="followers"></a>
   <a href="https://github.com/ShapArt?tab=repositories"><img src="https://img.shields.io/badge/Public%20Repos-18-blue?style=for-the-badge" alt="repos"></a>
-  <img src="https://img.shields.io/badge/Focus-Backend%20%26%20Automation-success?style=for-the-badge" alt="focus">
+  <img src="https://img.shields.io/badge/Primary-RU-important?style=for-the-badge" alt="ru-first">
 </p>
 
-![Social Preview](https://raw.githubusercontent.com/ShapArt/ShapArt/main/.github/social-preview.png)
-
-## EN
-I design and ship backend-heavy products, automation services, and bot ecosystems that solve real operational problems.
-My approach: practical architecture, measurable outcomes, and maintainable delivery speed.
-
 ## RU
-Я проектирую и запускаю backend-продукты, automation-сервисы и bot-экосистемы, которые решают реальные операционные задачи.
-Мой подход: практичная архитектура, измеримый результат и высокая скорость без потери поддерживаемости.
+Я инженер, который строит backend-системы, автоматизацию и bot-платформы под реальные рабочие задачи.
+Фокус: быстрое внедрение, чистая архитектура, поддерживаемый код и понятная документация.
 
-## Signature Areas / Ключевые направления
-- Telegram bot platforms and subscription logic
-- API-first backend services and self-hosted infrastructure
-- Data and media automation pipelines
-- Engineering standards: docs, CI, and clear repository hygiene
+## Ключевые направления
+- Telegram bot ecosystems и подписочные модели
+- API-first backend и self-hosted инфраструктура
+- Data/media automation pipelines
+- Инженерная дисциплина: README, CI, стандарты качества
 
-## Featured Projects / Избранные проекты
+## Избранные проекты
 - [vpn-bot-stars-hiddify](https://github.com/ShapArt/vpn-bot-stars-hiddify)
 - [private-messenger](https://github.com/ShapArt/private-messenger)
 - [selfhost-cloud](https://github.com/ShapArt/selfhost-cloud)
@@ -31,12 +27,8 @@ My approach: practical architecture, measurable outcomes, and maintainable deliv
 - [compress-photos-cli](https://github.com/ShapArt/compress-photos-cli)
 - [outlook-exporter](https://github.com/ShapArt/outlook-exporter)
 
-## Value / Ценность
-- Convert manual routines into robust automation systems.
-- Keep product speed and engineering quality in balance.
-- Build repositories that are easy to understand, run, and extend.
+## EN
+I build backend-heavy products and automation systems with practical architecture and measurable outcomes.
 
-## Contact / Контакт
+## Contact
 - GitHub: [@ShapArt](https://github.com/ShapArt)
-
-
