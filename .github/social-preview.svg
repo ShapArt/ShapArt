@@ -1,0 +1,61 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ShapArt profile banner</title>
+  <desc id="desc">Dark profile banner for ShapArt with backend, automation, and operator tooling positioning.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#111A33"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="190" y1="120" x2="1040" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EE7F9" stop-opacity="0.24"/>
+      <stop offset="0.5" stop-color="#7C8DFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#A78BFA" stop-opacity="0.18"/>
+    </linearGradient>
+    <filter id="blur" x="0" y="0" width="1280" height="640" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="640" rx="28" fill="url(#bg)"/>
+  <g opacity="0.75" filter="url(#blur)">
+    <circle cx="250" cy="170" r="120" fill="#2448FF"/>
+    <circle cx="1010" cy="210" r="140" fill="#14B8A6"/>
+    <circle cx="860" cy="520" r="120" fill="#8B5CF6"/>
+  </g>
+
+  <g opacity="0.16" stroke="#E5E7EB">
+    <path d="M0 96H1280"/>
+    <path d="M0 176H1280"/>
+    <path d="M0 256H1280"/>
+    <path d="M0 336H1280"/>
+    <path d="M0 416H1280"/>
+    <path d="M0 496H1280"/>
+    <path d="M120 0V640"/>
+    <path d="M280 0V640"/>
+    <path d="M440 0V640"/>
+    <path d="M600 0V640"/>
+    <path d="M760 0V640"/>
+    <path d="M920 0V640"/>
+    <path d="M1080 0V640"/>
+  </g>
+
+  <rect x="64" y="64" width="1152" height="512" rx="24" fill="url(#accent)" fill-opacity="0.08" stroke="rgba(255,255,255,0.18)"/>
+
+  <text x="96" y="168" fill="#E5E7EB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="0.12em">ARTYOM SHAPOVALOV · BMSTU IU8</text>
+  <text x="96" y="280" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="92" font-weight="800">ShapArt</text>
+  <text x="96" y="350" fill="#C7D2FE" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="34" font-weight="600">Backend, automation, and operator tooling</text>
+
+  <text x="96" y="430" fill="#D1D5DB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28" font-weight="400">Practical systems for delivery flows, operator UX, browser automation,</text>
+  <text x="96" y="472" fill="#D1D5DB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="28" font-weight="400">data export, and integration-heavy internal tools.</text>
+
+  <g font-family="Inter, Segoe UI, Arial, sans-serif" font-size="22" font-weight="600">
+    <rect x="96" y="520" width="178" height="44" rx="22" fill="#111827" stroke="#374151"/>
+    <text x="126" y="549" fill="#E5E7EB">Backend</text>
+
+    <rect x="292" y="520" width="194" height="44" rx="22" fill="#111827" stroke="#374151"/>
+    <text x="322" y="549" fill="#E5E7EB">Automation</text>
+
+    <rect x="504" y="520" width="246" height="44" rx="22" fill="#111827" stroke="#374151"/>
+    <text x="534" y="549" fill="#E5E7EB">Operator tooling</text>
+  </g>
+</svg>
