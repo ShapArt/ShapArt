@@ -12,6 +12,18 @@ I build practical software for workflows that are usually repetitive, fragile, o
 - **Current work:** document workflow automation at Cherkizovo, since February 2026
 - **Main direction:** applied backend and automation tools with security and reliability awareness
 
+## Case-study portfolio
+
+Detailed case studies live in [`cases-and-achievements`](https://github.com/ShapArt/cases-and-achievements):
+
+| Case | Area | What it shows |
+|---|---|---|
+| [EyeGate-L / Luckfox SCUD](https://github.com/ShapArt/cases-and-achievements/blob/main/cases/01-eyegate-l-luckfox-scud.md) | Computer vision / edge / access control | Technical depth, constrained hardware thinking, security-sensitive system boundaries |
+| [SLA / Outlook Tracker](https://github.com/ShapArt/cases-and-achievements/blob/main/cases/02-sla-outlook-tracker.md) | Office automation / reporting | Business-facing automation, Outlook/Excel data workflows, status visibility |
+| [Matrtix-Cleaner](https://github.com/ShapArt/cases-and-achievements/blob/main/cases/03-matrtix-cleaner.md) | Browser automation / OpenText | Guarded enterprise automation with preview, audit, ambiguity handling, and operator control |
+| [OpenText Operator Bridge](https://github.com/ShapArt/cases-and-achievements/blob/main/cases/04-opentext-operator-bridge.md) | Backend / workflow tooling | Intake, triage, bounded action planning, and integration-heavy backend design |
+| [Sh4pArt VPN](https://github.com/ShapArt/cases-and-achievements/blob/main/cases/05-sh4part-vpn.md) | Backend / Telegram bot / infra | Full service lifecycle from payment to provisioning, profile delivery, and reminders |
+
 ## What I focus on
 
 ### Document workflow automation
@@ -52,41 +64,17 @@ That means paying attention to:
 - what happens when an external dependency breaks;
 - how to keep public repositories free from sensitive internal details.
 
-## Selected case studies
+## Selected project summaries
 
-### 1. Document workflow automation at Cherkizovo
+### EyeGate-L / Luckfox SCUD prototype
 
-**Context:** current applied work in a document workflow automation department.
+**Repository:** [`eyegate-l-luckfox-scud`](https://github.com/ShapArt/eyegate-l-luckfox-scud)
 
-**Problem shape:** document-heavy operations often involve repeated manual steps, matrix checks, user substitutions, routing rules, and status verification.
+Edge-focused computer vision and access-control prototype aimed at constrained hardware.
 
-**What I work on:** scripts and operator-oriented tooling that simplify repeated document workflow actions and make operational work more predictable.
+**Why it matters:** the project shows interest in deployment constraints, local inference, hardware-adjacent thinking, and security-oriented system design.
 
-**Engineering value:** this is the kind of work where correctness and clarity matter more than flashy UI. Tools should reduce routine, not hide risk.
-
-**Public boundary:** internal systems and business details are not exposed in public repositories.
-
-### 2. Matrtix-Cleaner
-
-**Repository:** [`Matrtix-Cleaner`](https://github.com/ShapArt/Matrtix-Cleaner)
-
-Tampermonkey-based operator tool for previewing, auditing, and applying guarded bulk changes in OpenText approval matrices.
-
-**Why it matters:** approval matrices are risky to edit manually because small mistakes can affect routing, signers, legal entities, and document rules. The project focuses on controlled browser-side automation with preview and operator review instead of blind mass mutation.
-
-**Signals:** JavaScript, Tampermonkey, host DOM integration, dry-run style planning, ambiguity handling, matrix-specific workflow actions.
-
-### 3. OpenText Operator Bridge
-
-**Repository:** [`opentext-operator-bridge`](https://github.com/ShapArt/opentext-operator-bridge)
-
-Private backend/operator workflow layer for intake, triage, and bounded action planning around OpenText-related support scenarios.
-
-**Why it matters:** real operational requests often arrive through emails, files, portals, and incomplete context. This project is about turning fragmented inputs into a reviewable workflow.
-
-**Signals:** Python, FastAPI, SQLAlchemy, Playwright, pywin32, server-rendered UI, environment-specific integrations.
-
-### 4. outlook-exporter
+### SLA / Outlook Tracker
 
 **Repository:** [`outlook-exporter`](https://github.com/ShapArt/outlook-exporter)
 
@@ -94,25 +82,29 @@ Windows-first Outlook export and spreadsheet processing workspace for turning ma
 
 **Why it matters:** a lot of business process truth lives in email. Exporting, transforming, and reviewing that information without manual copy-paste is a practical automation problem.
 
-**Signals:** Python, pywin32, pandas, openpyxl, PySide6.
+### Matrtix-Cleaner
 
-### 5. vpn-bot-stars-hiddify
+**Repository:** [`Matrtix-Cleaner`](https://github.com/ShapArt/Matrtix-Cleaner)
+
+Tampermonkey-based operator tool for previewing, auditing, and applying guarded bulk changes in OpenText approval matrices.
+
+**Why it matters:** approval matrices are risky to edit manually because small mistakes can affect routing, signers, legal entities, and document rules. The project focuses on controlled browser-side automation with preview and operator review instead of blind mass mutation.
+
+### OpenText Operator Bridge
+
+**Repository:** [`opentext-operator-bridge`](https://github.com/ShapArt/opentext-operator-bridge)
+
+Private backend/operator workflow layer for intake, triage, and bounded action planning around OpenText-related support scenarios.
+
+**Why it matters:** real operational requests often arrive through emails, files, portals, and incomplete context. This project is about turning fragmented inputs into a reviewable workflow.
+
+### vpn-bot-stars-hiddify
 
 **Repository:** [`vpn-bot-stars-hiddify`](https://github.com/ShapArt/vpn-bot-stars-hiddify)
 
 Telegram-first VPN subscription backend built around payment, provisioning, profile delivery, and reminder logic.
 
 **Why it matters:** the interesting part is not only the bot interface; it is the full delivery path between payment, user state, provisioning, onboarding links, and support reduction.
-
-**Signals:** Python, FastAPI, Telegram Bot API, SQLite, APScheduler, Hiddify-oriented integration paths.
-
-### 6. EyeGate-L / Luckfox SCUD prototype
-
-**Repository:** [`eyegate-l-luckfox-scud`](https://github.com/ShapArt/eyegate-l-luckfox-scud)
-
-Edge-focused computer vision and access-control prototype aimed at constrained hardware.
-
-**Why it matters:** the project shows interest in deployment constraints, local inference, hardware-adjacent thinking, and security-oriented system design.
 
 ## Skills map
 
@@ -161,9 +153,10 @@ Edge-focused computer vision and access-control prototype aimed at constrained h
 This profile is intentionally structured into several layers:
 
 1. **Selected projects** — the best public repositories for a quick technical review.
-2. **Supporting tools** — small utilities and bots that show practical automation instincts.
-3. **Academic repositories** — coursework archives from BMSTU showing technical foundation.
-4. **Private/internal work** — summarized carefully without exposing sensitive systems.
+2. **Case studies** — deeper explanation of problem, solution, stack, result, and lessons learned.
+3. **Supporting tools** — small utilities and bots that show practical automation instincts.
+4. **Academic repositories** — coursework archives from BMSTU showing technical foundation.
+5. **Private/internal work** — summarized carefully without exposing sensitive systems.
 
 Not every repository is meant to look like a startup product. Some are utilities, some are experiments, and some are academic archives. The common thread is practical engineering: reduce routine, make workflows clearer, and build tools around real constraints.
 
@@ -172,3 +165,5 @@ Not every repository is meant to look like a startup product. Some are utilities
 Я Шаповалов Артём, студент 4 курса ИУ8 МГТУ им. Н. Э. Баумана по направлению компьютерной безопасности.
 
 С февраля 2026 работаю в Черкизово в направлении автоматизации документооборота. Основной интерес — backend, automation, operator tooling, безопасность процессов и практические инструменты, которые уменьшают ручную рутину.
+
+Подробные кейсы вынесены в отдельный репозиторий [`cases-and-achievements`](https://github.com/ShapArt/cases-and-achievements), чтобы работодатель мог быстро увидеть не только стек, но и инженерное мышление: проблема, решение, результат и выводы.
