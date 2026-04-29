@@ -1,57 +1,72 @@
-<h1 align="center">ShapArt</h1>
-<p align="center"><strong>Backend, automation, and operator tooling</strong></p>
+<h1 align="center">Artyom Shapovalov · ShapArt</h1>
+<p align="center"><strong>Backend · Automation · Operator Tooling · Computer Security</strong></p>
 
 ![Profile Banner](.github/social-preview.svg)
 
-I build practical software for workflows that are usually painful, repetitive, or easy to break: Telegram bots, internal operator tools, browser automation, data export utilities, and systems that sit between infrastructure and day-to-day operations.
+I am a 4th-year Computer Security student at **BMSTU IU8** and an automation engineer working with document workflow processes at **Cherkizovo** since February 2026.
 
-A meaningful part of my applied work lives in private repositories because it is tied to internal environments, coursework materials, or non-public assets. The repositories here show the kind of engineering problems I like to work on: delivery flows, operator UX, guarded automation, and tools that reduce manual effort.
+I build practical tools around real operations: document workflow automation, browser-side helpers, Telegram bot backends, Outlook/Excel exporters, self-hosted services, and integration-heavy internal tools.
 
-## Focus areas
+## What I build
 
-- **Backend systems** for API-driven flows, integrations, and operational logic
-- **Automation and workflow tooling** for repetitive business processes and internal support scenarios
-- **Telegram bots and operator UX** where onboarding, delivery, and support have to work together
-- **Browser-side operator tools** for improving workflows inside existing systems
-- **Infrastructure-minded delivery** with attention to configuration, failure modes, and maintainability
-- **Academic foundations** across networks, databases, embedded systems, electronics, and applied ML coursework
+- **Document workflow automation** — scripts and operator tooling for repetitive approval, matrix, export, and status-checking tasks
+- **Backend services** — FastAPI apps, Telegram bot backends, webhook flows, SQLite/SQLAlchemy state, environment-driven deployment
+- **Browser-side operator tools** — Tampermonkey helpers for existing enterprise interfaces where a full API is not available
+- **Data export utilities** — Outlook / Excel / pandas / openpyxl workflows for turning messy operational data into structured artifacts
+- **Security-minded systems** — automation with attention to secrets, failure modes, review steps, and safe boundaries
+
+## Current focus
+
+```text
+role       document workflow automation
+company    Cherkizovo
+since      February 2026
+education  BMSTU IU8 · Computer Security
+profile    backend + automation + security-minded tooling
+```
 
 ## Selected projects
 
-- `vpn-bot-stars-hiddify` — Telegram-first VPN subscription backend with payment, provisioning, deeplink and reminder flow
-- `Matrtix-Cleaner` — Tampermonkey operator tool for guarded bulk changes in OpenText approval matrices
-- `opentext-operator-bridge` — private guarded intake, triage, and operator workflow backend for OpenText-related support scenarios
-- `outlook-exporter` — Windows-first Outlook export and spreadsheet processing workspace
-- `tampermonkey-ozon-tickets-export` — browser helper for ticket export and operator-side review
-- `eyegate-l-luckfox-scud` — edge-focused computer vision prototype for constrained hardware
+| Project | Direction | Why it matters |
+|---|---|---|
+| [`Matrtix-Cleaner`](https://github.com/ShapArt/Matrtix-Cleaner) | Browser automation / OpenText | Guarded bulk changes for approval matrices with preview, audit, and operator control |
+| [`opentext-operator-bridge`](https://github.com/ShapArt/opentext-operator-bridge) | Backend / workflow tooling | Intake, triage, and bounded action planning for OpenText-related support scenarios |
+| [`outlook-exporter`](https://github.com/ShapArt/outlook-exporter) | Office automation | Windows-first Outlook export and spreadsheet processing workspace |
+| [`vpn-bot-stars-hiddify`](https://github.com/ShapArt/vpn-bot-stars-hiddify) | Backend / Telegram bot | Payment, provisioning, profile delivery, and reminder flow for a VPN subscription backend |
+| [`tampermonkey-ozon-tickets-export`](https://github.com/ShapArt/tampermonkey-ozon-tickets-export) | Browser helper | Ticket export and operator-side review inside an existing browser workflow |
+| [`eyegate-l-luckfox-scud`](https://github.com/ShapArt/eyegate-l-luckfox-scud) | CV / edge prototype | Access-control and computer vision prototype aimed at constrained hardware |
 
-## Supporting work
+## Portfolio map
 
-- Telegram bots: `kino-bot`, `qotd-telegram-bot`, `tg-media-downloader-bot`, `bmstu-practice-2024-telegram-bot`
-- Media utilities: `compress-photos-cli`, `image-cover-cropper`, `media-compressor-web`
-- Academic foundations: `8-sem-network-labs`, `ASVT`, `labs`, `kursovaia-coursework`, `db-music-store`, `dsp-labs`, `tsosi-course-projects`
-- Context and prototypes: `cases-and-achievements`, `selfhost-cloud`, `private-messenger`, `Jornal`
-
-## Engineering approach
-
-I like systems that turn fragile manual steps into repeatable workflows.
-
-That usually means being careful about boundaries: what should be automated, what should stay operator-controlled, what needs a preview first, and what has to fail closed instead of failing creatively.
-
-I care more about clear behavior and usable interfaces than about over-abstracting a codebase for its own sake.
+- [`PORTFOLIO.md`](PORTFOLIO.md) — detailed project and case-study overview
+- [`RESUME.md`](RESUME.md) — resume-style summary for recruiters and hiring managers
+- [`cases-and-achievements`](https://github.com/ShapArt/cases-and-achievements) — place for curated case write-ups
 
 ## Stack snapshot
 
-**Languages and runtime**
+**Languages:** Python, JavaScript, SQL, shell scripting, C++ basics  
+**Backend / automation:** FastAPI, Telegram Bot API, SQLite, SQLAlchemy, Playwright, pywin32, pandas, openpyxl, PySide6, Tampermonkey  
+**Systems / security:** Linux CLI, Git, Docker / Compose basics, nginx basics, systemd basics, TLS basics, OWASP Top 10 awareness, log triage foundations  
+**Academic base:** computer security, networks, databases, embedded systems, electronics simulation, DSP, applied ML / CV / NLP coursework
 
-Python, JavaScript, SQL, shell tooling
+## Engineering approach
 
-**Typical building blocks**
+I like tools that reduce routine without hiding risk.
 
-FastAPI, Telegram Bot API, SQLite, SQLAlchemy, pandas, openpyxl, PySide6, Playwright, browser userscripts, environment-driven configuration
+For me, good automation is not “click one button and hope.” It should be inspectable, bounded, repeatable, and clear about where human review is still required.
+
+That is why many of my projects sit between backend engineering, operator UX, document workflows, and security-minded process design.
 
 ## RU
 
-Делаю прикладные backend- и automation-инструменты: боты, операторские утилиты, экспортёры, браузерную автоматизацию и сервисы на стыке инфраструктуры и повседневных процессов.
+Я Шаповалов Артём, студент 4 курса ИУ8 МГТУ им. Н. Э. Баумана по направлению компьютерной безопасности.
 
-Для меня важны не громкие слова, а понятная инженерная ценность: меньше рутины, меньше хрупких ручных действий, больше предсказуемости в работе системы.
+С февраля 2026 работаю в Черкизово в отделе автоматизации документооборота. Делаю скрипты и инструменты, которые упрощают повторяющиеся операции, помогают работать с документными процессами и делают ручную работу более предсказуемой.
+
+Мой основной фокус: backend, automation, operator tooling, безопасность процессов и прикладные инструменты, которые реально уменьшают рутину.
+
+## Contact
+
+- Email: `sh4part@gmail.com`
+- Telegram: [`@shapart`](https://t.me/shapart)
+- GitHub: [`github.com/ShapArt`](https://github.com/ShapArt)
