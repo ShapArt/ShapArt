@@ -1,8 +1,6 @@
 <h1 align="center">ShapArt</h1>
 <p align="center"><strong>Backend, automation, and operator tooling</strong></p>
 
-![Social Preview](https://raw.githubusercontent.com/ShapArt/ShapArt/main/.github/social-preview.png)
-
 I build practical software for workflows that are usually painful, repetitive, or easy to break: Telegram bots, internal operator tools, browser automation, data export utilities, and systems that sit between infrastructure and day-to-day operations.
 
 A meaningful part of my applied work lives in private repositories because it is tied to internal environments, coursework materials, or non-public assets. The public repositories below show the kind of engineering problems I like to work on: delivery flows, operator UX, guarded automation, and tools that reduce manual effort instead of adding ceremony.
