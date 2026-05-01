@@ -30,7 +30,7 @@ I am interested in backend engineering, automation, security operations, infrast
 
 ### NAOS Vostok — Systems / Content / Automation Work
 
-**November 2022 — present**
+**November 2022 — February 2026**
 
 - Built Tampermonkey and Windows-side scripts for repeated operational tasks.
 - Worked with exports, Excel-style reporting, and process status tracking.
