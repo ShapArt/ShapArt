@@ -1,8 +1,6 @@
 <h1 align="center">Artyom Shapovalov · ShapArt</h1>
 <p align="center"><strong>Backend · Automation · Operator Tooling · Computer Security</strong></p>
 
-![Profile Banner](.github/social-preview.svg)
-
 I am a 4th-year Computer Security student at **BMSTU IU8** and an automation engineer working with document workflow processes at **Cherkizovo** since February 2026.
 
 I build practical tools around real operations: document workflow automation, browser-side helpers, Telegram bot backends, Outlook/Excel exporters, self-hosted services, and integration-heavy internal tools.
