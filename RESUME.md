@@ -1,123 +1,136 @@
-# Resume — Artyom Shapovalov
+# Artyom Shapovalov
 
-**Cybersecurity · Security Automation · Backend · Enterprise Tooling**
+**Information Security · Security Automation · SIEM/SOC · Backend**
 
-- **Email:** sh4part@gmail.com
-- **Telegram:** [@shapart](https://t.me/shapart)
-- **GitHub:** [github.com/ShapArt](https://github.com/ShapArt)
-- **Education:** BMSTU, IU8, 10.05.01 Computer Security — 5th year
-- **Current role:** Document Workflow Automation, Cherkizovo Infotech — since February 2026
-- **Target:** Junior / internship — Security Automation, Backend, AppSec, SOC Engineering, Internal Tools
+Moscow · [GitHub](https://github.com/ShapArt) · [Telegram @shapart](https://t.me/shapart) · [artem.shapovalov2003@gmail.com](mailto:artem.shapovalov2003@gmail.com)
 
-## Profile
+## Summary
 
-5th-year Computer Security student at BMSTU IU8 and automation engineer working with real enterprise document workflows.
+5th-year **Computer Security** student at BMSTU IU8 with almost four years of professional IT experience across systems administration, operational automation and enterprise document workflows.
 
-I build internal tools around OpenText/TESSA, browser automation, Excel/data workflows and backend services. My main languages are **Python, JavaScript and SQL**. I regularly work with Linux and understand REST APIs, relational databases, container-oriented deployment and event/log pipelines.
+Currently working with **OpenText/TESSA at Cherkizovo**: approval matrices and routes, user incidents, data validation and internal automation. Main languages are **Python, JavaScript and SQL**. I regularly work with Linux and understand backend services, REST APIs, relational databases and container deployment.
 
-I am strongest in tasks where the system is unfamiliar, the workflow is manual or fragile, and the useful result is not a demo but a tool that can be safely used every day.
+I also have practical SIEM/log-analysis experience with **MaxPatrol SIEM**, Windows event sources, source diagnostics, NetFlow and event parsing. I am looking for a junior position or internship in **SIEM/SOC, security automation or AppSec**.
+
+### Selected proof points
+
+- OpenText bulk operations: **hours of manual UI work → ~10 minutes** for typical covered scenarios.
+- Built and introduced an internal OpenText operator toolkit used in day-to-day work by **two specialists**.
+- **Alfa CTF 2026 — 45th place**.
+- 3+ years of Windows / Microsoft 365 / workplace systems administration before moving into enterprise automation.
 
 ## Experience
 
-### Cherkizovo Infotech — Document Workflow Automation
-**February 2026 — Present**
+### Cherkizovo Group — Document Workflow Automation Specialist
+**February 2026 — present**
 
-- Support OpenText/TESSA agreement and document-approval workflows.
-- Configure and analyse approval matrices and routing conditions: signers, functions, categories, legal entities, sites and related attributes.
-- Investigate user incidents, routing errors and non-standard document cases.
-- Develop JavaScript/Python/Excel tools for validation, exports, comparison and controlled preparation/application of changes.
-- Built **OpenText Toolkit / Matrix Cleaner** and **TESSA Matrix Studio** around recurring operator tasks and risky bulk-edit scenarios.
-- Automation in the covered workflows removes **up to ~4 hours of manual work per day**.
-- Use preview-before-action, explicit scoping, conflict checks, reviewable diffs and logs for risky operations.
+Support **OpenText/TESSA** and document approval processes.
 
-### NAOS Vostok — Systems Administrator / Support / Automation
-**November 2022 — January 2026**
+- Configure approval matrices and routes: approvers, signers, stage conditions, legal entities, categories, document types and limits.
+- Investigate user requests, routing errors and non-standard document cases.
+- Compare document cards and approval sheets, prepare reports and validate data.
+- Write service scripts and exports in **JavaScript, Python and SQL**.
+- Developed and introduced **OpenText Toolkit / Matrix Cleaner**, a Tampermonkey operator tool for recurring and bulk matrix changes.
+- The toolkit generates an explicit plan, shows affected rows and applies only confirmed operations instead of blindly mutating the matrix.
+- Typical covered bulk changes that previously took hours of repetitive UI work can now be completed in about **10 minutes**.
+- Also develop **TESSA Matrix Studio**, an XLSX round-trip workflow for reviewing and safely applying matrix changes.
 
-- Supported Windows workstations, users, services and network-related workplace issues.
-- Worked with Microsoft 365 and routine workplace administration.
-- Automated Outlook/Excel exports, ticket/status tracking and reporting.
-- Built browser/Windows helpers for repetitive CMS and seller-interface workflows.
+### NAOS Vostok — Systems Administrator
+**November 2022 — February 2026**
 
-## Selected projects
+- Issued and configured computers, peripherals and accounts.
+- Worked with **Windows, Microsoft 365, Intune, device policies, access management and basic inventory**.
+- Performed day-to-day Windows Server tasks, service maintenance, remote access and workplace integrations.
+- Supported Bitrix and 1C content/operational workflows and coordinated with colleagues and contractors.
+- Published `naos.ru` pages from prepared layouts: promotions, magazine articles and banners.
+- Automated repetitive tasks with Tampermonkey and Windows scripts, saving roughly an hour of manual work per day in covered workflows.
+- Built reporting processes with **Power Automate, Excel and Power BI**.
+- Developed an **SLA tracker**: Outlook/Graph data → SQLite → Excel → automated deadline reminders and SLA visibility.
 
-### OpenText Toolkit / Matrix Cleaner
-[github.com/ShapArt/Matrtix-Cleaner](https://github.com/ShapArt/Matrtix-Cleaner)
+## Selected Projects
 
-Tampermonkey-based operator layer for OpenText approval matrices and support workflows: request parsing, matrix inspection, preview plans, guarded apply, ambiguity handling, reconciliation, knowledge-base assistance and regression testing.
+### [OpenText Toolkit / Matrix Cleaner](https://github.com/ShapArt/Matrtix-Cleaner)
+Tampermonkey-based operator layer for OpenText approval matrices and support workflows. Request parsing, scoped preview plans, ambiguity handling, guarded apply, reconciliation and regression checks.
 
-**Focus:** JavaScript, Tampermonkey, Playwright, enterprise browser automation, safe bulk operations.
+**Stack:** JavaScript, Tampermonkey, Playwright, browser/DOM automation.
 
-### TESSA Matrix Studio
-[github.com/ShapArt/tessa-matrix-studio](https://github.com/ShapArt/tessa-matrix-studio)
+### [TESSA Matrix Studio](https://github.com/ShapArt/tessa-matrix-studio)
+Excel round-trip editor for TESSA matrices: export, edit, exact diff, review and controlled apply with identity/live-state checks.
 
-Excel round-trip editor for TESSA matrices: export to XLSX, preserve row identity, build an exact diff, review the plan and apply only verified changes.
+**Stack:** JavaScript, XLSX workflows, CI/release automation.
 
-**Focus:** JavaScript, XLSX workflows, diff/plan execution, CI/release engineering, operator safety.
+### [EyeGate-L](https://github.com/ShapArt/eyegate-l-luckfox-scud)
+Edge computer-vision access-control prototype for LuckFox-class hardware.
 
-### EyeGate-L / LuckFox SCUD
-[github.com/ShapArt/eyegate-l-luckfox-scud](https://github.com/ShapArt/eyegate-l-luckfox-scud)
+**Stack:** Python, OpenCV, local inference, GPIO-oriented integration.
 
-Edge/CV access-control prototype for constrained LuckFox hardware with local processing, GPIO integration and security-sensitive boundaries.
-
-**Focus:** Python, OpenCV, edge deployment, access control, embedded-style constraints.
-
-### SH4PART VPN
-[github.com/ShapArt/vpn-bot-stars-hiddify](https://github.com/ShapArt/vpn-bot-stars-hiddify)
-
+### [SH4PART VPN](https://github.com/ShapArt/vpn-bot-stars-hiddify)
 Telegram-first subscription backend connecting payment/user state with provisioning and profile delivery.
 
-**Stack:** Python, FastAPI, Telegram Bot API, SQLite, Hiddify/Xray, nginx, systemd.
+**Stack:** Python, FastAPI, SQLite, Hiddify/Xray, nginx, systemd.
 
-### SLA / Outlook Toolkit
-[github.com/ShapArt/outlook-exporter](https://github.com/ShapArt/outlook-exporter)
+### [SLA / Outlook Toolkit](https://github.com/ShapArt/outlook-exporter)
+Outlook/Graph extraction and operational reporting automation.
 
-Windows/Office automation for mailbox-derived operational data, exports, status tracking and reporting.
+**Stack:** Python, pywin32, Microsoft Graph, SQLite, pandas, openpyxl.
 
-**Stack:** Python, pywin32, pandas, openpyxl, PySide6, Tampermonkey.
+## Information Security Practice
 
-## Security practice
-
-- **MaxPatrol SIEM:** practical familiarity with event collection/source diagnostics, event/log analysis and SIEM concepts.
-- **Windows telemetry:** Event Logs, Sysmon, WEF/WEC, authentication/RDP/PowerShell events.
-- **Linux telemetry:** auditd, rsyslog/syslog pipelines and source-side troubleshooting.
-- **Traffic/log analysis:** NetFlow, syslog, PCAP-based exercises and event investigation.
-- **AppSec:** secrets, permissions, safe defaults, bounded actions, failure modes, auditability and OWASP foundations.
-- **CTF:** web, crypto, reverse and general security problem solving.
+- **MaxPatrol SIEM:** event delivery, source diagnostics, parsing and event investigation.
+- **Windows telemetry:** Windows Event Logs, authentication/RDP events, Sysmon concepts.
+- **Network/log analysis:** NetFlow, syslog and traffic-analysis exercises.
+- **Linux:** CLI, permissions, services, networking and logs.
+- **AppSec:** authentication/authorization, secrets, safe defaults, OWASP-oriented thinking and failure modes.
+- **Security automation:** dry-run/preview, explicit scope, bounded mutation, auditability and post-action verification.
+- **CTF:** web, crypto, reverse and general security tasks.
 
 ## Skills
 
-### Programming / backend
-Python, JavaScript, SQL, FastAPI, REST APIs, SQLAlchemy, PostgreSQL, SQLite, Telegram Bot API.
+**Programming:** Python, JavaScript, SQL, C++, Shell, HTML/CSS  
+**Backend:** FastAPI, REST APIs, PostgreSQL, SQLite  
+**Infrastructure:** Linux, Docker, nginx, systemd, Git, Windows, Microsoft 365, Intune  
+**Security:** MaxPatrol SIEM, Windows Event Logs, NetFlow, log parsing, AAA, RDP, iptables, OSINT  
+**Automation:** Tampermonkey, Playwright, pywin32, Power Automate, pandas, openpyxl  
+**Computer Vision:** OpenCV
 
-### Automation / data
-Playwright, Tampermonkey, pywin32, pandas, openpyxl, PySide6, Excel automation.
+## Education
 
-### Systems / infrastructure
-Linux CLI, Git, Docker / Compose, nginx, systemd, Windows administration, Microsoft 365.
+### BMSTU — IU8
+**10.05.01 Computer Security · Specialist degree · 5th year**
 
-### Domain
-OpenText, TESSA, approval/routing systems, operator tooling, document workflow automation.
+### BMSTU Digital Department
+**Web Developer · 2024**
 
-### AI-assisted engineering
-ChatGPT, Codex, Cursor and Claude used as a controlled workflow: understand → plan → diff → tests → manual review → verification.
+### VK Education
+**Application Security / AppSec · 2025**
 
-## Education & courses
+## Certificates & Achievements
 
-- **BMSTU, IU8** — 10.05.01 Computer Security, specialist degree, 5th year.
-- **BMSTU Digital Department** — Web Developer, 2024.
-- **VK Education** — Application Security / AppSec, 2025.
-- **Stepik:** Introduction to Information Security of Hardware Solutions; Introduction to SQL; Probability Theory; Specialist in Countering Cyberattacks; AI Threat Team: Security of AI Systems; Trusted Artificial Intelligence.
+### 2026
+- [DevOps простым языком — Stepik](https://stepik.org/cert/3328074)
+- [Доверенный искусственный интеллект — Stepik](https://stepik.org/cert/3328089)
+- [Специалист по противодействию кибератакам — Stepik](https://stepik.org/cert/3328110)
+- **Alfa CTF 2026 — 45th place** ([standings](https://clist.by/standings/alfa-ctf-2026-66930397/))
 
-## Achievements
+### 2025
+- [Введение в SQL — Stepik](https://stepik.org/cert/2937373)
+- [Введение в информационную безопасность аппаратных решений — Stepik](https://stepik.org/cert/2945060)
+- [Теория вероятностей — Stepik](https://stepik.org/cert/2945135)
+- **VK Education — Application Security / AppSec**
 
-- **Alpha CTF 2026** — top 10% among 2000+ teams.
-- **Arctic Probe 2020 / Skolkovo** — winner of an engineering-project competition; Arctic buoy prototype.
-- **ICCETT / Quantoriada** — finalist; Python-based psycho-emotional training project.
+### Earlier
+- **Skolkovo / Arctic Probe 2020** — engineering-project winner, Arctic buoy prototype.
 
-## RU
+→ [Full certificates and achievements](CERTIFICATES.md)
 
-Шаповалов Артём. Студент 5 курса ИУ8 МГТУ им. Н. Э. Баумана, специальность 10.05.01 «Компьютерная безопасность».
+---
 
-С февраля 2026 работаю в «Черкизово Инфотех» с OpenText/TESSA: сопровождаю процесс согласования документов, настраиваю и анализирую матрицы и маршруты, разбираю нетипичные обращения и разрабатываю внутренние инструменты на JavaScript/Python/Excel. Основные публичные проекты — OpenText Toolkit / Matrix Cleaner, TESSA Matrix Studio, EyeGate-L, SH4PART VPN и SLA / Outlook Toolkit.
+## RU — кратко
 
-Ищу junior / internship позицию в направлениях security automation, backend, AppSec/SOC engineering или internal tooling.
+Учусь на 5 курсе ИУ8 МГТУ им. Н. Э. Баумана по специальности «Компьютерная безопасность». С февраля 2026 работаю с OpenText/TESSA в Черкизово: настраиваю маршруты и матрицы согласования, разбираю сложные заявки и пишу внутренние инструменты на Python, JavaScript и SQL.
+
+Разработал OpenText Toolkit / Matrix Cleaner: для типовых массовых изменений инструмент строит план, показывает затрагиваемые строки и применяет только подтверждённые операции. В покрытых сценариях работа сократилась с нескольких часов ручного редактирования примерно до 10 минут.
+
+До Черкизово больше трёх лет работал системным администратором: Windows, Microsoft 365, Intune, серверные задачи, Outlook/Graph, Power Automate, Excel/Power BI и автоматизация SLA.
+
+Есть практический опыт с MaxPatrol SIEM, журналами Windows, NetFlow и диагностикой источников. Ищу junior-позицию или стажировку в SIEM/SOC, security automation или AppSec.
