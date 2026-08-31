@@ -1,228 +1,329 @@
 # Artyom Shapovalov — Engineering Portfolio
 
-**Cybersecurity · Security Automation · Backend · Enterprise Tooling**
+**Security Automation · SIEM/SOC · Backend · Enterprise Tooling**
 
-I build practical software around workflows that are repetitive, fragile, security-sensitive or buried inside existing enterprise interfaces.
+This document is the deeper version of my GitHub profile: less badge wall, more **problem → engineering decision → result**.
 
-My strongest work is not isolated demo code. It is tooling around real systems: OpenText/TESSA approval matrices, browser-side operator workflows, Excel round-trips, Outlook automation, backend services, event/log pipelines and edge/CV prototypes.
+## Snapshot
 
-## Current profile
+- **BMSTU IU8** — 10.05.01 Computer Security, 5th year
+- **Cherkizovo Group** — document workflow automation, February 2026 → present
+- **Previous:** 3+ years systems administration / support / automation
+- **Main languages:** Python, JavaScript, SQL
+- **Security focus:** SIEM/SOC, AppSec, logs/event pipelines, safe automation
+- **CTF:** Alfa CTF 2026 — **45th place**
 
-- **Education:** BMSTU, IU8, 10.05.01 Computer Security — 5th year
-- **Current work:** Cherkizovo Infotech, document workflow automation — since February 2026
-- **Core languages:** Python, JavaScript, SQL
-- **Main direction:** security-minded automation, backend, internal tools and operator tooling
-- **Open to:** junior / internship roles in security automation, backend, AppSec, SOC engineering and internal tooling
+---
 
-## Portfolio map
-
-### Tier 1 — flagship work
-
-| Project | Area | What it demonstrates |
-|---|---|---|
-| [OpenText Toolkit / Matrix Cleaner](https://github.com/ShapArt/Matrtix-Cleaner) | Enterprise browser automation | Understanding a risky legacy workflow, request parsing, preview-before-apply, guarded mutation, ambiguity handling, regression control |
-| [TESSA Matrix Studio](https://github.com/ShapArt/tessa-matrix-studio) | TESSA / Excel round-trip | Product-like operator UX, exact diff planning, preserved row identity, safe apply, releases and CI |
-| [EyeGate-L / LuckFox SCUD](https://github.com/ShapArt/eyegate-l-luckfox-scud) | Edge / CV / access control | Constrained hardware, local processing, physical-system boundaries and security-oriented design |
-| [SH4PART VPN](https://github.com/ShapArt/vpn-bot-stars-hiddify) | Backend / Telegram / infrastructure | Payment/user state, provisioning, subscription delivery and Linux deployment |
-| [SLA / Outlook Toolkit](https://github.com/ShapArt/outlook-exporter) | Windows / Office automation | pywin32, Outlook/Excel data pipelines, reporting and recurring operational automation |
-
-### Tier 2 — supporting public work
-
-The rest of the profile includes smaller utilities, bots, academic repositories and experiments. They are useful evidence of range, but the five projects above are the best starting point for a technical review.
-
-## 01 · OpenText Toolkit / Matrix Cleaner
+# Case 01 — OpenText Toolkit / Matrix Cleaner
 
 **Repository:** [ShapArt/Matrtix-Cleaner](https://github.com/ShapArt/Matrtix-Cleaner)
 
-### Problem
+## Context
 
-Approval matrices are large, repetitive and deceptively risky. Similar rows can differ in legal entities, sites, categories, document types, signer roles or amount limits. A fast but incorrect mass edit can create routing failures that surface much later.
+OpenText approval matrices encode real routing policy: who approves, who signs, for which legal entity, category, document type, site, amount range and other conditions.
 
-### Solution
+The painful part is not the number of clicks. The painful part is that many rows look similar while carrying different meaning. A “fast” bulk edit without a review layer can create a routing problem that only appears later on a real document.
 
-A Tampermonkey-based operator layer around OpenText that adds a controlled workflow instead of blind automation:
+## Problem
 
-1. inspect context;
-2. parse the request;
-3. resolve scope and ambiguity;
-4. build a concrete preview plan;
-5. let the operator review it;
-6. re-check the target before writing;
-7. apply only the approved scope;
-8. log and verify the result.
+Typical requests included things like:
 
-The current toolkit also covers ticket/request assistance, route roles, signers, matrix reconciliation, knowledge-base support and regression tests built from real failure cases.
+- replace a signer across a defined scope;
+- add a legal entity without changing adjacent rules;
+- move a site or function between people;
+- change a limit while preserving the rest of a row;
+- understand why a route behaved differently from what the requester expected.
 
-### Why it matters
+Historically, large changes were performed row by row through the interface and could take **hours of repetitive work**.
 
-This is the strongest example of my engineering approach: **automation should reduce routine without hiding operational risk**.
+## What I built
 
-## 02 · TESSA Matrix Studio
+A Tampermonkey-based operator toolkit that sits on top of OpenText and turns a dangerous free-form operation into a controlled workflow.
+
+```text
+request / ticket
+      ↓
+parse intent and scope
+      ↓
+inspect the actual matrix
+      ↓
+build an explicit change plan
+      ↓
+show affected rows + ambiguity
+      ↓
+operator review
+      ↓
+re-check target state
+      ↓
+guarded apply
+      ↓
+verify / log
+```
+
+The toolkit supports matrix inspection, request parsing, preview plans, signer/role operations, row splitting, scoped replacement, reconciliation and HelpDesk-oriented diagnostics.
+
+## Safety decisions
+
+- **Preview first:** no bulk write without a visible plan.
+- **Ambiguity is a state:** unclear input becomes a question, not a guess.
+- **Scope is explicit:** legal entity / site / category / role boundaries stay visible.
+- **Fresh checks:** the write path validates target state before mutation.
+- **Regression from reality:** real tickets and historical failure cases are turned into repeatable tests.
+
+## Result
+
+For typical covered bulk scenarios, work that previously took **hours** can now be prepared and completed in roughly **10 minutes**.
+
+The tool is used in daily OpenText work by me and a senior specialist, while the recovered time goes into non-standard incidents, route diagnostics and process improvements.
+
+## What this project demonstrates
+
+`JavaScript` · `Tampermonkey` · `Playwright` · browser automation · parsing · domain modelling · safe mutation · operator UX · regression engineering
+
+---
+
+# Case 02 — TESSA Matrix Studio
 
 **Repository:** [ShapArt/tessa-matrix-studio](https://github.com/ShapArt/tessa-matrix-studio)
 
-### Problem
+## Problem
 
-Large TESSA approval matrices are much easier to edit as structured tabular data than through many individual UI operations — but an Excel workflow becomes dangerous if row identity and the live state of the matrix are lost.
+Editing large TESSA matrices directly in the UI is slow. Excel is excellent for structured bulk editing — but naive “export/edit/import” loses the most important thing: **identity and confidence that the live row is still the same row you reviewed**.
 
-### Solution
+## What I built
 
-A round-trip workflow:
+An XLSX round-trip workflow:
 
-`TESSA → XLSX → edits → exact diff → operator review → fresh validation → apply`
+```text
+TESSA
+  ↓
+structured export
+  ↓
+Excel bulk edit
+  ↓
+exact diff / plan
+  ↓
+operator review
+  ↓
+fresh live-state validation
+  ↓
+controlled apply
+```
 
-The export carries hidden identity/baseline data, the preview translates spreadsheet changes into explicit operations, and the write path re-checks the live matrix before applying the approved plan.
+The export preserves hidden identity/baseline information. The preview converts spreadsheet differences into concrete operations. The apply path validates the current matrix instead of treating the XLSX as absolute truth.
 
-### Product layer
+## Why it matters
 
-The project is maintained with versioned releases, quality/security CI, installable Tampermonkey artifacts, documentation and a production runbook. It is intentionally closer to a small internal product than a one-off script.
+This is the same engineering principle as Matrix Cleaner expressed through a different interface: **make the easy editing surface convenient without making the dangerous action blind**.
 
-## 03 · EyeGate-L / LuckFox SCUD
+## Product layer
 
-**Repository:** [ShapArt/eyegate-l-luckfox-scud](https://github.com/ShapArt/eyegate-l-luckfox-scud)
+The repository is maintained like a small internal product: releases, CI, installable artifact, documentation and production-oriented checks rather than a single one-off script.
 
-Edge-focused access-control prototype for constrained LuckFox hardware.
+## What this project demonstrates
 
-The project combines computer vision, local processing, GPIO/hardware interaction and security-sensitive separation between recognition/decision logic and the physical lock action.
+`JavaScript` · XLSX workflows · identity preservation · diff planning · controlled writes · CI/release engineering · productization
 
-**What it demonstrates:** embedded-style constraints, CV, local-first architecture and thinking about what should happen when dependencies fail.
+---
 
-## 04 · SH4PART VPN
-
-**Repository:** [ShapArt/vpn-bot-stars-hiddify](https://github.com/ShapArt/vpn-bot-stars-hiddify)
-
-Telegram-first backend around a complete subscription delivery path rather than only a chatbot UI.
-
-Typical path:
-
-`payment / user state → entitlement → provisioning → signed profile delivery → reminders / support`
-
-**Stack:** Python, FastAPI, Telegram Bot API, SQLite, Hiddify/Xray, nginx, systemd.
-
-**What it demonstrates:** backend state, integration-heavy delivery, secret/token boundaries and deployment outside a local development machine.
-
-## 05 · SLA / Outlook Toolkit
+# Case 03 — SLA / Outlook Operations Toolkit
 
 **Repository:** [ShapArt/outlook-exporter](https://github.com/ShapArt/outlook-exporter)
 
-Windows-first automation around Outlook/Excel operational data.
+## Context
 
-**Stack:** Python, pywin32, pandas, openpyxl, PySide6, Tampermonkey.
+At NAOS, many operational tasks lived in Outlook, Excel and people’s heads: statuses, deadlines, repeated exports and reminders.
 
-The project represents an older but important part of my portfolio: noticing repetitive office operations, extracting the real data model from them and turning copy-paste work into repeatable tooling.
+## What I built
 
-## Professional experience
+- Outlook / Microsoft Graph data extraction;
+- SQLite storage for structured operational state;
+- Excel reporting and exports;
+- automated deadline reminders;
+- supporting Power Automate / Power BI flows;
+- browser/Windows helpers for recurring support operations.
 
-### Cherkizovo Infotech — Document Workflow Automation
-**February 2026 — Present**
+## Result
 
-I support OpenText/TESSA document approval processes and work with matrices, routes, signers, categories, legal entities, sites, card data and user incidents.
+The tooling removed repeated copy-paste work, saved roughly **an hour per day** in covered tasks and gave clearer visibility into SLA deadlines and overdue items.
 
-Typical engineering work includes:
+## What this project demonstrates
 
-- tracing why a document received an unexpected route;
-- checking how matrix conditions interact;
-- preparing large signer/site/category changes;
-- comparing planned and actual matrix state;
-- building JavaScript/Python/Excel utilities around repetitive work;
-- turning recurring support patterns into diagnostics or operator tools;
-- keeping changes reviewable when a mistake would affect later documents.
+`Python` · `pywin32` · `Microsoft Graph` · `SQLite` · `pandas` · `openpyxl` · operations automation
 
-The automation built around these tasks removes **up to ~4 hours of manual work per day** in the workflows it covers.
+---
 
-### NAOS Vostok — Systems Administration / Support / Automation
-**November 2022 — January 2026**
+# Case 04 — EyeGate-L
 
-Worked with Windows workplaces, user support, services/network troubleshooting and Microsoft 365. Repetitive Outlook/Excel reporting, CMS and seller-interface operations became small scripts and browser helpers rather than permanent manual procedures.
+**Repository:** [ShapArt/eyegate-l-luckfox-scud](https://github.com/ShapArt/eyegate-l-luckfox-scud)
 
-## Security practice
+## Goal
 
-Security is both my academic direction and a layer I apply to engineering work.
+Prototype an edge computer-vision access-control system on LuckFox-class constrained hardware.
 
-### Logs / SIEM
+## Engineering focus
 
-- MaxPatrol SIEM: event collection/source diagnostics and event-analysis concepts;
-- Windows Event Logs and Sysmon;
-- WEF/WEC event forwarding;
-- authentication, RDP and PowerShell event investigation;
-- Linux auditd and rsyslog/syslog pipelines;
-- NetFlow, syslog and PCAP exercises;
-- normalization/correlation and source-side troubleshooting.
+- local processing rather than a cloud dependency in the decision path;
+- CV pipeline under hardware constraints;
+- separation between recognition/decision and the physical lock action;
+- GPIO-oriented integration;
+- thinking through what should happen when a dependency fails.
 
-### AppSec / safe automation
+## What this project demonstrates
 
-- secrets and token handling;
-- permission boundaries;
+`Python` · `OpenCV` · edge AI · embedded-style constraints · security boundaries
+
+---
+
+# Case 05 — SH4PART VPN
+
+**Repository:** [ShapArt/vpn-bot-stars-hiddify](https://github.com/ShapArt/vpn-bot-stars-hiddify)
+
+## Goal
+
+Build more than a Telegram bot UI: create the backend path from user/payment state to access provisioning and subscription delivery.
+
+```text
+Telegram user
+    ↓
+payment / entitlement state
+    ↓
+backend
+    ↓
+provisioning
+    ↓
+signed/profile delivery
+    ↓
+reminders / lifecycle
+```
+
+## Stack
+
+`Python` · `FastAPI` · `SQLite` · `Telegram Bot API` · `Hiddify/Xray` · `nginx` · `systemd`
+
+## What this project demonstrates
+
+Backend state, integrations, token/secret boundaries and Linux deployment outside a local development environment.
+
+---
+
+# Professional Experience
+
+## Cherkizovo Group — Document Workflow Automation
+**February 2026 — present**
+
+I support OpenText/TESSA document approval processes and investigate why routes behave the way they do.
+
+Day-to-day work includes:
+
+- configuring matrices and routes;
+- approvers, signers and approval stages;
+- legal entities, categories, document types and limits;
+- investigating routing errors and non-standard user cases;
+- comparing document cards and approval sheets;
+- SQL/data checks and operational reports;
+- JavaScript/Python tooling around repetitive work;
+- turning recurring support patterns into diagnostics or operator automation.
+
+The work made **OpenText Toolkit / Matrix Cleaner** and **TESSA Matrix Studio** possible: both came from real recurring operations rather than invented portfolio requirements.
+
+## NAOS Vostok — Systems Administrator
+**November 2022 — February 2026**
+
+Worked with Windows workplaces, Microsoft 365, Intune, device policies, user access, Windows Server tasks, services, remote access and workplace integrations.
+
+Also supported Bitrix/1C operational workflows, published prepared content to `naos.ru`, interacted with contractors and automated Outlook/Excel/support operations.
+
+---
+
+# Security Track
+
+## SIEM / event analysis
+
+Practical experience and exercises around:
+
+- MaxPatrol SIEM;
+- event delivery and source diagnostics;
+- Windows Event Logs;
+- authentication/RDP events and Sysmon concepts;
+- NetFlow and traffic/log analysis;
+- parsing and correlation thinking;
+- Linux logs and service-side troubleshooting.
+
+## AppSec / safe engineering
+
+My automation work has made several security principles very practical:
+
+- permissions and authentication/authorization boundaries;
+- secrets/token handling;
 - input validation;
-- safe defaults and fail-closed behaviour where appropriate;
+- safe defaults;
+- explicit scope;
 - dry-run / preview before mutation;
-- explicit operator confirmation for destructive or ambiguous operations;
-- logs, reproducibility and post-action verification.
+- auditability;
+- predictable failure behaviour;
+- refusing to infer destructive intent when evidence is weak.
 
-## Education & achievements
+---
 
-### BMSTU IU8
+# Education & Evidence
 
-**10.05.01 Computer Security — specialist degree, 5th year**
+## BMSTU IU8
 
-Academic base includes computer networks, databases, embedded systems, cryptography/security disciplines, DSP and applied ML/CV/NLP coursework.
+**10.05.01 Computer Security · specialist degree · 5th year**
 
-### Additional education
+## Additional education
 
-- **BMSTU Digital Department — Web Developer**, 2024
 - **VK Education — Application Security / AppSec**, 2025
-- Selected Stepik coursework:
-  - Introduction to Information Security of Hardware Solutions
-  - Introduction to SQL
-  - Probability Theory
-  - Specialist in Countering Cyberattacks
-  - AI Threat Team: Security of AI Systems
-  - Trusted Artificial Intelligence
+- **BMSTU Digital Department — Web Developer**, 2024
 
-### Achievements
+## Certificates
 
-- **Alpha CTF 2026 — top 10% among 2000+ teams**
-- **Arctic Probe 2020 / Skolkovo — winner**, engineering prototype of an Arctic buoy
+### 2026
+- [DevOps простым языком](https://stepik.org/cert/3328074)
+- [Доверенный искусственный интеллект](https://stepik.org/cert/3328089)
+- [Специалист по противодействию кибератакам](https://stepik.org/cert/3328110)
+
+### 2025
+- [Введение в SQL](https://stepik.org/cert/2937373)
+- [Введение в информационную безопасность аппаратных решений](https://stepik.org/cert/2945060)
+- [Теория вероятностей](https://stepik.org/cert/2945135)
+
+## Competitions / engineering achievements
+
+- **Alfa CTF 2026 — 45th place** ([standings](https://clist.by/standings/alfa-ctf-2026-66930397/))
+- **Skolkovo / Arctic Probe 2020 — winner**, Arctic buoy engineering prototype
 - **ICCETT / Quantoriada — finalist**, Python-based psycho-emotional training project
 
-## Stack map
+→ [Certificates & achievements index](CERTIFICATES.md)
 
-### Core
-Python · JavaScript · SQL · Git · Linux
+---
 
-### Backend
-FastAPI · REST APIs · SQLAlchemy · PostgreSQL · SQLite · Telegram Bot API
+# Technical Map
 
-### Automation / data
-Playwright · Tampermonkey · pywin32 · pandas · openpyxl · PySide6
+| Area | Tools / technologies |
+|---|---|
+| Programming | Python, JavaScript, SQL, C++, Shell |
+| Backend | FastAPI, REST APIs, PostgreSQL, SQLite |
+| Automation | Tampermonkey, Playwright, pywin32, Power Automate, pandas, openpyxl |
+| Systems | Linux, Windows, Microsoft 365, Intune, Git, Docker, nginx, systemd |
+| Security | MaxPatrol SIEM, Windows Event Logs, NetFlow, log parsing, AAA, RDP, iptables, OSINT |
+| CV | OpenCV, edge/local processing |
+| Enterprise domain | OpenText, TESSA, approval matrices and routing workflows |
 
-### Infrastructure
-Docker / Compose · nginx · systemd · Windows administration · Microsoft 365
+---
 
-### Security
-SIEM/log analysis foundations · MaxPatrol SIEM · WEF/WEC · Sysmon · auditd · syslog · AppSec/OWASP foundations
+# Engineering Principle
 
-### Enterprise domain
-OpenText · TESSA · approval/routing matrices · document workflows · operator tooling
+The common pattern across the best projects is not a framework or language.
 
-## Engineering approach
+It is this:
 
-I like systems where the difficult part is not writing a function, but understanding **what must not break**.
+> **Make the operator faster without making the system less understandable.**
 
-My preferred pattern is:
+I prefer reviewable automation over magic buttons, explicit uncertainty over confident guessing and production verification over “it worked on my machine”.
 
-`understand → measure → model scope → preview → review → apply → verify`
+---
 
-I use AI coding tools in the same way: useful for exploration and implementation speed, but changes still go through diffs, tests, manual review and verification.
-
-## Notes on confidentiality
-
-Some work touches internal enterprise processes. Public repositories and case studies intentionally describe the engineering shape without publishing credentials, private URLs, employee data or sensitive business configuration.
-
-## RU
-
-Я Артём Шаповалов, студент 5 курса ИУ8 МГТУ им. Н. Э. Баумана по специальности «Компьютерная безопасность».
-
-С февраля 2026 работаю в «Черкизово Инфотех» с OpenText/TESSA. Сопровождаю процессы согласования документов, разбираю маршруты и матрицы, пользовательские обращения и нетипичные случаи. Параллельно пишу инструменты на JavaScript/Python/Excel, которые убирают ручную рутину и делают массовые изменения проверяемыми.
-
-Главные проекты: **OpenText Toolkit / Matrix Cleaner**, **TESSA Matrix Studio**, **EyeGate-L**, **SH4PART VPN** и **SLA / Outlook Toolkit**.
+[← GitHub profile](README.md) · [Resume](RESUME.md) · [Certificates](CERTIFICATES.md) · [Cases repository](https://github.com/ShapArt/cases-and-achievements)
