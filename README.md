@@ -7,7 +7,7 @@
 **5th-year Computer Security student @ BMSTU IU8** · **Cherkizovo Infotech since February 2026**
 
 [![BMSTU](https://img.shields.io/badge/BMSTU_IU8-Computer_Security-111111?style=flat-square)](https://bmstu.ru/)
-[![Work](https://img.shields.io/badge/Cherkizovo_Infotech-since_Feb_2026-111111?style=flat-square)](https://cherkizovo.com/)
+![Work](https://img.shields.io/badge/Cherkizovo_Infotech-since_Feb_2026-111111?style=flat-square)
 [![CTF](https://img.shields.io/badge/Alpha_CTF_2026-Top_10%25-111111?style=flat-square)](#achievements--education)
 [![VK Education](https://img.shields.io/badge/VK_Education-AppSec_2025-111111?style=flat-square)](#achievements--education)
 
