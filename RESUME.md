@@ -1,104 +1,123 @@
 # Resume — Artyom Shapovalov
 
-**Backend / Automation / Operator Tooling / Computer Security Student**
+**Cybersecurity · Security Automation · Backend · Enterprise Tooling**
 
-- **Name:** Artyom Shapovalov
 - **Email:** sh4part@gmail.com
 - **Telegram:** [@shapart](https://t.me/shapart)
 - **GitHub:** [github.com/ShapArt](https://github.com/ShapArt)
-- **Education:** BMSTU, IU8, Computer Security, expected 2028
-- **Current role:** Document workflow automation, Cherkizovo, since February 2026
+- **Education:** BMSTU, IU8, 10.05.01 Computer Security — 5th year
+- **Current role:** Document Workflow Automation, Cherkizovo Infotech — since February 2026
+- **Target:** Junior / internship — Security Automation, Backend, AppSec, SOC Engineering, Internal Tools
 
-## Summary
+## Profile
 
-I am a 4th-year Computer Security student at BMSTU IU8 and an applied automation engineer working with document workflow processes.
+5th-year Computer Security student at BMSTU IU8 and automation engineer working with real enterprise document workflows.
 
-My strongest direction is building practical tools around real operational workflows: browser-side helpers, document workflow automation scripts, Telegram bot backends, Outlook/Excel exporters, and integration-heavy utilities.
+I build internal tools around OpenText/TESSA, browser automation, Excel/data workflows and backend services. My main languages are **Python, JavaScript and SQL**. I regularly work with Linux and understand REST APIs, relational databases, container-oriented deployment and event/log pipelines.
 
-I am interested in backend engineering, automation, security operations, infrastructure-minded delivery, and tools that reduce manual work without hiding operational risk.
+I am strongest in tasks where the system is unfamiliar, the workflow is manual or fragile, and the useful result is not a demo but a tool that can be safely used every day.
 
 ## Experience
 
-### Cherkizovo — Document Workflow Automation
+### Cherkizovo Infotech — Document Workflow Automation
+**February 2026 — Present**
 
-**Since February 2026**
+- Support OpenText/TESSA agreement and document-approval workflows.
+- Configure and analyse approval matrices and routing conditions: signers, functions, categories, legal entities, sites and related attributes.
+- Investigate user incidents, routing errors and non-standard document cases.
+- Develop JavaScript/Python/Excel tools for validation, exports, comparison and controlled preparation/application of changes.
+- Built **OpenText Toolkit / Matrix Cleaner** and **TESSA Matrix Studio** around recurring operator tasks and risky bulk-edit scenarios.
+- Automation in the covered workflows removes **up to ~4 hours of manual work per day**.
+- Use preview-before-action, explicit scoping, conflict checks, reviewable diffs and logs for risky operations.
 
-- Work with document workflow automation processes and internal operational tooling.
-- Develop scripts that simplify repeated document workflow operations.
-- Focus on making manual processes more predictable, repeatable, and easier to inspect.
-- Apply safety-minded automation principles: preview before action, bounded changes, clear operator control.
+### NAOS Vostok — Systems Administrator / Support / Automation
+**November 2022 — January 2026**
 
-### NAOS Vostok — Systems / Content / Automation Work
-
-**November 2022 — February 2026**
-
-- Built Tampermonkey and Windows-side scripts for repeated operational tasks.
-- Worked with exports, Excel-style reporting, and process status tracking.
-- Supported content and operational workflows around marketplace / CRM-like environments.
+- Supported Windows workstations, users, services and network-related workplace issues.
+- Worked with Microsoft 365 and routine workplace administration.
+- Automated Outlook/Excel exports, ticket/status tracking and reporting.
+- Built browser/Windows helpers for repetitive CMS and seller-interface workflows.
 
 ## Selected projects
 
-### vpn-bot-stars-hiddify
+### OpenText Toolkit / Matrix Cleaner
+[github.com/ShapArt/Matrtix-Cleaner](https://github.com/ShapArt/Matrtix-Cleaner)
 
-Telegram-first VPN subscription backend with payment, provisioning, profile delivery, and reminder logic.
+Tampermonkey-based operator layer for OpenText approval matrices and support workflows: request parsing, matrix inspection, preview plans, guarded apply, ambiguity handling, reconciliation, knowledge-base assistance and regression testing.
 
-**Stack:** Python, FastAPI, Telegram Bot API, SQLite, APScheduler.
+**Focus:** JavaScript, Tampermonkey, Playwright, enterprise browser automation, safe bulk operations.
 
-### Matrtix-Cleaner
+### TESSA Matrix Studio
+[github.com/ShapArt/tessa-matrix-studio](https://github.com/ShapArt/tessa-matrix-studio)
 
-Tampermonkey operator tool for guarded bulk changes in OpenText approval matrices.
+Excel round-trip editor for TESSA matrices: export to XLSX, preserve row identity, build an exact diff, review the plan and apply only verified changes.
 
-**Stack:** JavaScript, Tampermonkey, browser DOM integration.
+**Focus:** JavaScript, XLSX workflows, diff/plan execution, CI/release engineering, operator safety.
 
-### opentext-operator-bridge
+### EyeGate-L / LuckFox SCUD
+[github.com/ShapArt/eyegate-l-luckfox-scud](https://github.com/ShapArt/eyegate-l-luckfox-scud)
 
-Private backend/operator workflow layer for OpenText-related support scenarios.
+Edge/CV access-control prototype for constrained LuckFox hardware with local processing, GPIO integration and security-sensitive boundaries.
 
-**Stack:** Python, FastAPI, SQLAlchemy, Playwright, pywin32.
+**Focus:** Python, OpenCV, edge deployment, access control, embedded-style constraints.
 
-### outlook-exporter
+### SH4PART VPN
+[github.com/ShapArt/vpn-bot-stars-hiddify](https://github.com/ShapArt/vpn-bot-stars-hiddify)
 
-Windows-first Outlook export and spreadsheet processing workspace.
+Telegram-first subscription backend connecting payment/user state with provisioning and profile delivery.
 
-**Stack:** Python, pywin32, pandas, openpyxl, PySide6.
+**Stack:** Python, FastAPI, Telegram Bot API, SQLite, Hiddify/Xray, nginx, systemd.
 
-### EyeGate-L / Luckfox SCUD prototype
+### SLA / Outlook Toolkit
+[github.com/ShapArt/outlook-exporter](https://github.com/ShapArt/outlook-exporter)
 
-Edge-focused computer vision and access-control prototype for constrained hardware.
+Windows/Office automation for mailbox-derived operational data, exports, status tracking and reporting.
 
-**Stack:** Python / computer vision / embedded-style deployment.
+**Stack:** Python, pywin32, pandas, openpyxl, PySide6, Tampermonkey.
+
+## Security practice
+
+- **MaxPatrol SIEM:** practical familiarity with event collection/source diagnostics, event/log analysis and SIEM concepts.
+- **Windows telemetry:** Event Logs, Sysmon, WEF/WEC, authentication/RDP/PowerShell events.
+- **Linux telemetry:** auditd, rsyslog/syslog pipelines and source-side troubleshooting.
+- **Traffic/log analysis:** NetFlow, syslog, PCAP-based exercises and event investigation.
+- **AppSec:** secrets, permissions, safe defaults, bounded actions, failure modes, auditability and OWASP foundations.
+- **CTF:** web, crypto, reverse and general security problem solving.
 
 ## Skills
 
-### Programming and scripting
+### Programming / backend
+Python, JavaScript, SQL, FastAPI, REST APIs, SQLAlchemy, PostgreSQL, SQLite, Telegram Bot API.
 
-Python, JavaScript, SQL, shell scripting, C++ basics, C# / Go / TypeScript basics.
+### Automation / data
+Playwright, Tampermonkey, pywin32, pandas, openpyxl, PySide6, Excel automation.
 
-### Backend and automation
+### Systems / infrastructure
+Linux CLI, Git, Docker / Compose, nginx, systemd, Windows administration, Microsoft 365.
 
-FastAPI, Telegram Bot API, SQLite, SQLAlchemy, Playwright, Tampermonkey, pywin32, pandas, openpyxl, PySide6.
+### Domain
+OpenText, TESSA, approval/routing systems, operator tooling, document workflow automation.
 
-### Systems and security
+### AI-assisted engineering
+ChatGPT, Codex, Cursor and Claude used as a controlled workflow: understand → plan → diff → tests → manual review → verification.
 
-Linux CLI, nginx basics, systemd basics, Docker / Compose basics, TLS / Let's Encrypt basics, iptables basics, OWASP Top 10 awareness, recon and log triage foundations.
+## Education & courses
 
-### Academic foundation
+- **BMSTU, IU8** — 10.05.01 Computer Security, specialist degree, 5th year.
+- **BMSTU Digital Department** — Web Developer, 2024.
+- **VK Education** — Application Security / AppSec, 2025.
+- **Stepik:** Introduction to Information Security of Hardware Solutions; Introduction to SQL; Probability Theory; Specialist in Countering Cyberattacks; AI Threat Team: Security of AI Systems; Trusted Artificial Intelligence.
 
-Computer security, networks, databases, embedded systems, electronics simulation, DSP, applied ML / CV / NLP coursework.
+## Achievements
 
-## Career positioning
-
-Best fit roles:
-
-- Junior Backend Developer
-- Automation Engineer
-- Junior Security Engineer / SOC L1
-- Internal Tools Developer
-- Python Developer Intern / Junior
-- Workflow Automation Engineer
+- **Alpha CTF 2026** — top 10% among 2000+ teams.
+- **Arctic Probe 2020 / Skolkovo** — winner of an engineering-project competition; Arctic buoy prototype.
+- **ICCETT / Quantoriada** — finalist; Python-based psycho-emotional training project.
 
 ## RU
 
-Шаповалов Артём Михайлович. Студент 4 курса ИУ8 МГТУ им. Н. Э. Баумана, направление компьютерной безопасности.
+Шаповалов Артём. Студент 5 курса ИУ8 МГТУ им. Н. Э. Баумана, специальность 10.05.01 «Компьютерная безопасность».
 
-С февраля 2026 работаю в Черкизово в отделе автоматизации документооборота. Разрабатываю скрипты и инструменты, которые упрощают повторяющиеся операции и делают работу с процессами более предсказуемой.
+С февраля 2026 работаю в «Черкизово Инфотех» с OpenText/TESSA: сопровождаю процесс согласования документов, настраиваю и анализирую матрицы и маршруты, разбираю нетипичные обращения и разрабатываю внутренние инструменты на JavaScript/Python/Excel. Основные публичные проекты — OpenText Toolkit / Matrix Cleaner, TESSA Matrix Studio, EyeGate-L, SH4PART VPN и SLA / Outlook Toolkit.
+
+Ищу junior / internship позицию в направлениях security automation, backend, AppSec/SOC engineering или internal tooling.
