@@ -1,25 +1,59 @@
-<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">ShapArt GitHub profile banner</title>
-  <desc id="desc">Monochrome developer identity banner for Artyom Shapovalov, ShapArt, with terminal styling, GitHub profile block, and halftone pattern.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">ShapArt — Security Automation</title>
+  <desc id="desc">GitHub social preview for Artyom Shapovalov, security automation engineer and BMSTU Computer Security student.</desc>
   <defs>
-    <radialGradient id="glass" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(230 70) rotate(62) scale(410 310)"><stop stop-color="#FFFFFF" stop-opacity="0.16"/><stop offset="0.52" stop-color="#FFFFFF" stop-opacity="0.035"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient>
-    <linearGradient id="metal" x1="80" y1="100" x2="650" y2="480" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="0.42" stop-color="#D7D7D7"/><stop offset="0.72" stop-color="#FFFFFF"/><stop offset="1" stop-color="#BEBEBE"/></linearGradient>
-    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2.1" fill="#F5F5F5"/></pattern>
-    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.45"/></filter>
-    <clipPath id="cardClip"><rect x="34" y="50" width="1182" height="540" rx="36"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070A0F"/>
+      <stop offset=".58" stop-color="#0B1118"/>
+      <stop offset="1" stop-color="#07110E"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="82" y1="0" x2="1110" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A7FF4F"/>
+      <stop offset=".52" stop-color="#62E6D7"/>
+      <stop offset="1" stop-color="#78A8FF"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#C9D5E4" stroke-opacity=".05"/>
+    </pattern>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1080 84) rotate(140) scale(520 420)">
+      <stop stop-color="#62E6D7" stop-opacity=".15"/>
+      <stop offset="1" stop-color="#62E6D7" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="1280" height="640" rx="30" fill="#080808"/><rect width="1280" height="640" rx="30" fill="url(#glass)"/>
-  <g opacity="0.08" stroke="#FFFFFF"><path d="M0 110H1280"/><path d="M0 220H1280"/><path d="M0 330H1280"/><path d="M0 440H1280"/><path d="M0 550H1280"/><path d="M120 0V640"/><path d="M280 0V640"/><path d="M440 0V640"/><path d="M600 0V640"/><path d="M760 0V640"/><path d="M920 0V640"/><path d="M1080 0V640"/></g>
-  <g filter="url(#softShadow)"><rect x="34" y="50" width="1182" height="540" rx="36" fill="#0B0B0B" stroke="#D8D8D8" stroke-opacity="0.62" stroke-width="1.4"/><rect x="68" y="88" width="960" height="464" rx="28" fill="#0E0E0E" stroke="#E8E8E8" stroke-opacity="0.56"/></g>
-  <g clip-path="url(#cardClip)"><circle cx="324" cy="-18" r="78" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="4"/><circle cx="323" cy="-18" r="88" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="7"/><circle cx="42" cy="560" r="120" stroke="#FFFFFF" stroke-opacity="0.17" stroke-width="5"/><circle cx="1198" cy="520" r="110" stroke="#FFFFFF" stroke-opacity="0.20" stroke-width="6"/></g>
-  <g font-family="Inter, Segoe UI, Arial, sans-serif"><text x="72" y="138" fill="#FFFFFF" font-size="42" font-weight="800">&gt;_</text><rect x="512" y="104" width="165" height="48" rx="24" fill="#111111" stroke="#EAEAEA" stroke-opacity="0.72"/><text x="543" y="136" fill="#F4F4F4" font-size="22" font-weight="500" letter-spacing="0.08em">ShapArt</text><circle cx="646" cy="128" r="7" fill="#F4F4F4"/>
-    <text x="72" y="250" fill="url(#metal)" font-size="86" font-weight="900" letter-spacing="-0.06em">Artyom</text><text x="72" y="352" fill="url(#metal)" font-size="86" font-weight="900" letter-spacing="-0.06em">Shapovalov</text><line x1="72" y1="386" x2="666" y2="386" stroke="#F4F4F4" stroke-opacity="0.58"/>
-    <rect x="72" y="414" width="100" height="86" rx="16" fill="#121212" stroke="#FFFFFF" stroke-opacity="0.72"/><text x="93" y="471" fill="#FFFFFF" font-size="54" font-weight="800">&gt;_</text><text x="198" y="454" fill="#FFFFFF" font-size="34" font-weight="500">Backend /</text><text x="198" y="492" fill="#FFFFFF" font-size="34" font-weight="500">Automation Engineer</text><text x="198" y="536" fill="#D6D6D6" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" letter-spacing="0.06em">BMSTU IU8</text>
-    <rect x="72" y="545" width="594" height="48" rx="24" fill="#0C0C0C" stroke="#FFFFFF" stroke-opacity="0.68"/><text x="198" y="577" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="24" letter-spacing="0.08em">Systems  •  Flows  •  Tooling</text></g>
-  <line x1="705" y1="104" x2="705" y2="560" stroke="#FFFFFF" stroke-opacity="0.45"/>
-  <g font-family="Inter, Segoe UI, Arial, sans-serif"><rect x="744" y="108" width="244" height="48" rx="24" fill="#111111" stroke="#FFFFFF" stroke-opacity="0.55"/><text x="778" y="139" fill="#FFFFFF" font-size="24" font-weight="500">github.com/ShapArt</text>
-    <rect x="744" y="182" width="244" height="244" rx="18" fill="#F2F2F2"/><rect x="767" y="205" width="34" height="34" rx="5" fill="#050505"/><rect x="778" y="216" width="12" height="12" rx="3" fill="#F2F2F2"/><rect x="931" y="205" width="34" height="34" rx="5" fill="#050505"/><rect x="942" y="216" width="12" height="12" rx="3" fill="#F2F2F2"/><rect x="767" y="369" width="34" height="34" rx="5" fill="#050505"/><rect x="778" y="380" width="12" height="12" rx="3" fill="#F2F2F2"/>
-    <g fill="#050505"><circle cx="820" cy="210" r="3"/><circle cx="837" cy="210" r="3"/><circle cx="862" cy="210" r="3"/><circle cx="891" cy="210" r="3"/><circle cx="918" cy="210" r="3"/><circle cx="817" cy="226" r="3"/><circle cx="846" cy="226" r="3"/><circle cx="874" cy="226" r="3"/><circle cx="902" cy="226" r="3"/><circle cx="820" cy="244" r="3"/><circle cx="840" cy="244" r="3"/><circle cx="860" cy="244" r="3"/><circle cx="884" cy="244" r="3"/><circle cx="912" cy="244" r="3"/><circle cx="930" cy="244" r="3"/><circle cx="814" cy="264" r="3"/><circle cx="832" cy="264" r="3"/><circle cx="870" cy="264" r="3"/><circle cx="898" cy="264" r="3"/><circle cx="920" cy="264" r="3"/><circle cx="948" cy="264" r="3"/><circle cx="823" cy="284" r="3"/><circle cx="850" cy="284" r="3"/><circle cx="876" cy="284" r="3"/><circle cx="910" cy="284" r="3"/><circle cx="936" cy="284" r="3"/><circle cx="808" cy="304" r="3"/><circle cx="834" cy="304" r="3"/><circle cx="860" cy="304" r="3"/><circle cx="886" cy="304" r="3"/><circle cx="918" cy="304" r="3"/><circle cx="948" cy="304" r="3"/><circle cx="818" cy="324" r="3"/><circle cx="846" cy="324" r="3"/><circle cx="870" cy="324" r="3"/><circle cx="900" cy="324" r="3"/><circle cx="930" cy="324" r="3"/><circle cx="812" cy="346" r="3"/><circle cx="838" cy="346" r="3"/><circle cx="862" cy="346" r="3"/><circle cx="892" cy="346" r="3"/><circle cx="918" cy="346" r="3"/><circle cx="948" cy="346" r="3"/><circle cx="822" cy="366" r="3"/><circle cx="852" cy="366" r="3"/><circle cx="876" cy="366" r="3"/><circle cx="902" cy="366" r="3"/><circle cx="932" cy="366" r="3"/><circle cx="822" cy="390" r="3"/><circle cx="846" cy="390" r="3"/><circle cx="872" cy="390" r="3"/><circle cx="900" cy="390" r="3"/><circle cx="930" cy="390" r="3"/><circle cx="948" cy="390" r="3"/></g>
-    <rect x="744" y="448" width="244" height="62" rx="18" fill="#111111" stroke="#FFFFFF" stroke-opacity="0.55"/><text x="782" y="488" fill="#FFFFFF" font-size="28" font-weight="500">@ShapArt</text><text x="744" y="562" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" letter-spacing="0.08em">BUILDING QUIET INFRASTRUCTURE</text><text x="744" y="588" fill="#FFFFFF" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" letter-spacing="0.08em">THAT KEEPS THINGS MOVING</text></g>
-  <g opacity="0.95" clip-path="url(#cardClip)"><path d="M1040 -20C1000 100 1032 210 1094 300C1156 390 1152 510 1116 660" stroke="url(#dots)" stroke-width="88" stroke-linecap="round"/><path d="M1196 -30C1128 100 1168 224 1222 316C1272 402 1266 526 1230 675" stroke="url(#dots)" stroke-width="96" stroke-linecap="round"/><path d="M952 -8C914 120 958 244 1008 334C1062 430 1042 526 986 666" stroke="url(#dots)" stroke-width="72" stroke-linecap="round" opacity="0.78"/></g>
+
+  <rect width="1280" height="640" rx="30" fill="url(#bg)"/>
+  <rect width="1280" height="640" rx="30" fill="url(#grid)"/>
+  <rect width="1280" height="640" rx="30" fill="url(#glow)"/>
+
+  <rect x="58" y="54" width="1164" height="532" rx="28" fill="#091018" fill-opacity=".8" stroke="#C9D5E4" stroke-opacity=".15"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
+    <circle cx="92" cy="86" r="6" fill="#FF6B6B"/>
+    <circle cx="114" cy="86" r="6" fill="#FFD166"/>
+    <circle cx="136" cy="86" r="6" fill="#A7FF4F"/>
+    <text x="166" y="92" font-size="17" fill="#8492A5">shapart@github:~</text>
+
+    <text x="88" y="162" font-size="18" fill="#62E6D7">$ cat identity.txt</text>
+    <text x="88" y="244" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="72" font-weight="850" letter-spacing="-2" fill="#F4F7FA">ARTYOM SHAPOVALOV</text>
+    <text x="88" y="292" font-size="22" fill="#CDD7E2">SECURITY AUTOMATION · SIEM/SOC · BACKEND · ENTERPRISE TOOLING</text>
+
+    <rect x="88" y="344" width="332" height="54" rx="27" fill="#101821" stroke="#A7FF4F" stroke-opacity=".38"/>
+    <text x="114" y="377" font-size="17" fill="#E3EAF1">BMSTU IU8 · 5th year</text>
+
+    <rect x="438" y="344" width="390" height="54" rx="27" fill="#101821" stroke="#62E6D7" stroke-opacity=".38"/>
+    <text x="464" y="377" font-size="17" fill="#E3EAF1">Cherkizovo · OpenText/TESSA</text>
+
+    <rect x="846" y="344" width="272" height="54" rx="27" fill="#101821" stroke="#78A8FF" stroke-opacity=".38"/>
+    <text x="872" y="377" font-size="17" fill="#E3EAF1">Alfa CTF 2026 · #45</text>
+
+    <text x="88" y="462" font-size="18" fill="#62E6D7">$ impact</text>
+    <text x="190" y="462" font-size="18" fill="#D1DAE4">OpenText bulk changes: hours → ~10 min</text>
+
+    <text x="88" y="510" font-size="18" fill="#62E6D7">$ philosophy</text>
+    <text x="226" y="510" font-size="18" fill="#D1DAE4">preview → review → bounded apply → verify</text>
+
+    <text x="88" y="558" font-size="16" fill="#8391A4">github.com/ShapArt</text>
+  </g>
+
+  <rect x="58" y="604" width="1164" height="3" rx="1.5" fill="url(#accent)"/>
 </svg>
