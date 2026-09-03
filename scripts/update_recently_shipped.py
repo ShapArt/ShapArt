@@ -86,10 +86,7 @@ def item_from_commit(repo: str, data: dict) -> dict:
 def render_items(items: list[dict]) -> str:
     lines = []
     for item in sorted(items, key=lambda value: value["sort_key"], reverse=True)[:4]:
-        lines.append(
-            f'- **[{item["name"]}]({item["url"]})** — `{item["label"]}` · '
-            f'{item["date"]} — {item["title"]}'
-        )
+        lines.append(f'- [{item["name"]}]({item["url"]}) · `{item["label"]}` · {item["date"]}')
     return "\n".join(lines)
 
 
