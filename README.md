@@ -12,7 +12,7 @@ I am a 5th-year Computer Security student at **BMSTU IU8** and work with **OpenT
 
 Looking for junior / internship roles in **SIEM/SOC, security automation or AppSec**.
 
-[Portfolio](PORTFOLIO.md) · [Resume](RESUME.md) · [Certificates](CERTIFICATES.md) · [HH / RU profile](HH_RU_PROFILE.txt) · [Telegram](https://t.me/shapart) · [Email](mailto:artem.shapovalov2003@gmail.com)
+[Portfolio](PORTFOLIO.md) · [Case Notes](https://github.com/ShapArt/cases-and-achievements) · [Resume](RESUME.md) · [Certificates](CERTIFICATES.md) · [HH / RU profile](HH_RU_PROFILE.txt) · [Telegram](https://t.me/shapart) · [Email](mailto:artem.shapovalov2003@gmail.com)
 
 **OpenText bulk work: hours → ~10 min** · **Alfa CTF 2026: #45** · **3+ years in systems / automation before my current role**
 
@@ -47,27 +47,27 @@ Looking for junior / internship roles in **SIEM/SOC, security automation or AppS
 <td width="50%" valign="top">
 <a href="https://github.com/ShapArt/eyegate-l-luckfox-scud"><img src="./assets/projects/eyegate-l.svg" alt="EyeGate-L" width="100%"></a>
 <h3><a href="https://github.com/ShapArt/eyegate-l-luckfox-scud">EyeGate-L</a></h3>
-<p>Edge computer-vision access-control prototype for LuckFox-class hardware. Recognition stays local; decision logic is kept separate from the physical lock action.</p>
-<p><code>Python · OpenCV · edge / local-first</code></p>
+<p>Two-door access-control prototype with a camera/vision pipeline, access policy, gate state machine, authentication, React UI and hardware-facing layer for LuckFox-class edge hardware.</p>
+<p><code>Python · FastAPI · OpenCV · React · serial / hardware</code></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 <a href="https://github.com/ShapArt/vpn-bot-stars-hiddify"><img src="./assets/projects/sh4part-vpn.svg" alt="SH4PART VPN" width="100%"></a>
 <h3><a href="https://github.com/ShapArt/vpn-bot-stars-hiddify">SH4PART VPN</a></h3>
-<p>Telegram-first backend for the subscription lifecycle: payment / entitlement state, provisioning, profile delivery, reminders and Linux deployment.</p>
-<p><code>Python · FastAPI · SQLite · Xray · nginx · systemd</code></p>
+<p>Small self-hosted backend connecting Telegram Stars payment state to SQLite, Hiddify provisioning, subscription delivery and expiry reminders.</p>
+<p><code>Python · FastAPI · SQLite · Telegram Stars · Hiddify</code></p>
 </td>
 <td width="50%" valign="top">
 <a href="https://github.com/ShapArt/outlook-exporter"><img src="./assets/projects/outlook-toolkit.svg" alt="SLA / Outlook Toolkit" width="100%"></a>
 <h3><a href="https://github.com/ShapArt/outlook-exporter">SLA / Outlook Toolkit</a></h3>
-<p>An earlier work-driven tool: Outlook / Graph → SQLite → Excel → deadlines and reports. Built because support requests were too easy to lose in mail and manual tracking.</p>
-<p><code>Python · pywin32 · Graph · SQLite · pandas</code></p>
+<p>Windows-first support tooling: Classic Outlook / MAPI → SQLite ticket state → SLA calculation → Excel reports and deadline reminders.</p>
+<p><code>Python · pywin32 · SQLite · pandas · PySide6</code></p>
 </td>
 </tr>
 </table>
 
-More shipped work and quantified cases: [cases-and-achievements](https://github.com/ShapArt/cases-and-achievements)
+Deeper project context: [Case Notes](https://github.com/ShapArt/cases-and-achievements)
 
 ---
 
@@ -76,8 +76,8 @@ More shipped work and quantified cases: [cases-and-achievements](https://github.
 <!-- RECENTLY-SHIPPED:START -->
 - [Matrix Cleaner](https://github.com/ShapArt/Matrtix-Cleaner/releases/tag/v12.4.0) · `v12.4.0` · 2026-09-02
 - [TESSA Matrix Studio](https://github.com/ShapArt/tessa-matrix-studio/releases/tag/v1.9.51) · `v1.9.51` · 2026-09-02
-- [SH4PART VPN](https://github.com/ShapArt/vpn-bot-stars-hiddify/commit/533797d074e51592141899f002f429651667dfc6) · `533797d` · 2026-04-28
-- [EyeGate-L](https://github.com/ShapArt/eyegate-l-luckfox-scud/commit/2d2698d1c388a0071b5705756e9068193019ec5c) · `2d2698d` · 2026-04-27
+- [SH4PART VPN](https://github.com/ShapArt/vpn-bot-stars-hiddify/commit/db2f1ff35f5b68772cf2bc17e863bfa0ea3e10e5) · `db2f1ff` · 2026-09-03
+- [EyeGate-L](https://github.com/ShapArt/eyegate-l-luckfox-scud/commit/46f7278f5720d90b35a4b632676a30b6c02dfd17) · `46f7278` · 2026-09-03
 <!-- RECENTLY-SHIPPED:END -->
 
 Updated automatically from the public repositories above.
@@ -96,7 +96,7 @@ Matrix Cleaner and TESSA Matrix Studio both came directly from that work.
 ### NAOS Vostok — systems administrator
 **November 2022 — February 2026**
 
-More than three years around Windows workplaces, Microsoft 365, Intune, device policies, access, Windows Server and user support. I wrote scripts and browser helpers, automated Outlook / Excel routines, built Power Automate / Power BI reporting flows and an SLA tracker around `Outlook/Graph → SQLite → Excel → reminders`.
+More than three years around Windows workplaces, Microsoft 365, Intune, device policies, access, Windows Server and user support. I wrote scripts and browser helpers, automated Outlook / Excel routines, built Power Automate / Power BI reporting flows and an SLA tracker around `Outlook → SQLite → Excel → reminders`.
 
 ---
 
