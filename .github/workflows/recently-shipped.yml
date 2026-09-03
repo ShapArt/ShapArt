@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "23 5 * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/update_recently_shipped.py"
+      - ".github/workflows/recently-shipped.yml"
 
 concurrency:
   group: recently-shipped
