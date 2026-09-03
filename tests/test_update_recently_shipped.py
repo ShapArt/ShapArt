@@ -62,14 +62,14 @@ class UpdateRecentlyShippedTests(unittest.TestCase):
         self.assertEqual(item["date"], "2026-08-30")
         self.assertEqual(item["title"], "Fix camera lifecycle")
 
-    def test_render_items_newest_first(self):
+    def test_render_items_newest_first_and_compact(self):
         items = [
             {
                 "name": "Older",
                 "url": "https://github.com/x/older",
                 "label": "v1",
                 "date": "2026-08-01",
-                "title": "old",
+                "title": "old release title should not render",
                 "sort_key": "2026-08-01T00:00:00Z",
             },
             {
@@ -77,12 +77,17 @@ class UpdateRecentlyShippedTests(unittest.TestCase):
                 "url": "https://github.com/x/newer",
                 "label": "v2",
                 "date": "2026-09-01",
-                "title": "new",
+                "title": "new release title should not render",
                 "sort_key": "2026-09-01T00:00:00Z",
             },
         ]
         rendered = render_items(items)
         self.assertLess(rendered.index("Newer"), rendered.index("Older"))
+        self.assertEqual(
+            rendered.splitlines()[0],
+            "- [Newer](https://github.com/x/newer) · `v2` · 2026-09-01",
+        )
+        self.assertNotIn("release title", rendered)
 
 
 if __name__ == "__main__":
