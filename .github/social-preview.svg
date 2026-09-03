@@ -1,59 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
-  <title id="title">ShapArt — Security Automation</title>
-  <desc id="desc">GitHub social preview for Artyom Shapovalov, security automation engineer and BMSTU Computer Security student.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#070A0F"/>
-      <stop offset=".58" stop-color="#0B1118"/>
-      <stop offset="1" stop-color="#07110E"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="82" y1="0" x2="1110" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#A7FF4F"/>
-      <stop offset=".52" stop-color="#62E6D7"/>
-      <stop offset="1" stop-color="#78A8FF"/>
-    </linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0H0V32" fill="none" stroke="#C9D5E4" stroke-opacity=".05"/>
-    </pattern>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1080 84) rotate(140) scale(520 420)">
-      <stop stop-color="#62E6D7" stop-opacity=".15"/>
-      <stop offset="1" stop-color="#62E6D7" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
+  <title id="title">ShapArt — Artyom Shapovalov</title>
+  <desc id="desc">Editorial social preview for Artyom Shapovalov: security automation, SIEM/SOC, backend and internal tools.</desc>
+  <rect width="1280" height="640" fill="#0b0f14"/>
+  <rect x="0" y="0" width="14" height="640" fill="#7dd3fc"/>
 
-  <rect width="1280" height="640" rx="30" fill="url(#bg)"/>
-  <rect width="1280" height="640" rx="30" fill="url(#grid)"/>
-  <rect width="1280" height="640" rx="30" fill="url(#glow)"/>
-
-  <rect x="58" y="54" width="1164" height="532" rx="28" fill="#091018" fill-opacity=".8" stroke="#C9D5E4" stroke-opacity=".15"/>
-
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
-    <circle cx="92" cy="86" r="6" fill="#FF6B6B"/>
-    <circle cx="114" cy="86" r="6" fill="#FFD166"/>
-    <circle cx="136" cy="86" r="6" fill="#A7FF4F"/>
-    <text x="166" y="92" font-size="17" fill="#8492A5">shapart@github:~</text>
-
-    <text x="88" y="162" font-size="18" fill="#62E6D7">$ cat identity.txt</text>
-    <text x="88" y="244" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="72" font-weight="850" letter-spacing="-2" fill="#F4F7FA">ARTYOM SHAPOVALOV</text>
-    <text x="88" y="292" font-size="22" fill="#CDD7E2">SECURITY AUTOMATION · SIEM/SOC · BACKEND · ENTERPRISE TOOLING</text>
-
-    <rect x="88" y="344" width="332" height="54" rx="27" fill="#101821" stroke="#A7FF4F" stroke-opacity=".38"/>
-    <text x="114" y="377" font-size="17" fill="#E3EAF1">BMSTU IU8 · 5th year</text>
-
-    <rect x="438" y="344" width="390" height="54" rx="27" fill="#101821" stroke="#62E6D7" stroke-opacity=".38"/>
-    <text x="464" y="377" font-size="17" fill="#E3EAF1">Cherkizovo · OpenText/TESSA</text>
-
-    <rect x="846" y="344" width="272" height="54" rx="27" fill="#101821" stroke="#78A8FF" stroke-opacity=".38"/>
-    <text x="872" y="377" font-size="17" fill="#E3EAF1">Alfa CTF 2026 · #45</text>
-
-    <text x="88" y="462" font-size="18" fill="#62E6D7">$ impact</text>
-    <text x="190" y="462" font-size="18" fill="#D1DAE4">OpenText bulk changes: hours → ~10 min</text>
-
-    <text x="88" y="510" font-size="18" fill="#62E6D7">$ philosophy</text>
-    <text x="226" y="510" font-size="18" fill="#D1DAE4">preview → review → bounded apply → verify</text>
-
-    <text x="88" y="558" font-size="16" fill="#8391A4">github.com/ShapArt</text>
+  <g stroke="#26313b" stroke-width="1">
+    <path d="M780 0V640M860 0V640M940 0V640M1020 0V640M1100 0V640M1180 0V640"/>
+    <path d="M740 80H1280M740 160H1280M740 240H1280M740 320H1280M740 400H1280M740 480H1280M740 560H1280"/>
   </g>
 
-  <rect x="58" y="604" width="1164" height="3" rx="1.5" fill="url(#accent)"/>
+  <g fill="none" stroke="#7dd3fc" stroke-width="3">
+    <path d="M780 80H900V160H1020V240H1180"/>
+    <path d="M820 560V480H940V400H1100V320H1240"/>
+  </g>
+  <g fill="#7dd3fc">
+    <circle cx="780" cy="80" r="6"/><circle cx="900" cy="160" r="6"/><circle cx="1020" cy="240" r="6"/><circle cx="1180" cy="240" r="6"/>
+    <circle cx="820" cy="560" r="6"/><circle cx="940" cy="480" r="6"/><circle cx="1100" cy="400" r="6"/><circle cx="1240" cy="320" r="6"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="72" y="92" fill="#7dd3fc" font-size="18" letter-spacing="4">SHAPART / PROFILE 2026</text>
+    <text x="72" y="220" fill="#f1efe8" font-size="72" font-weight="700" letter-spacing="-2">ARTYOM</text>
+    <text x="72" y="296" fill="#f1efe8" font-size="72" font-weight="700" letter-spacing="-2">SHAPOVALOV</text>
+    <text x="72" y="354" fill="#b8c1c9" font-size="24">security automation · SIEM/SOC · backend</text>
+    <text x="72" y="430" fill="#f1efe8" font-size="22">OpenText bulk work: hours → ~10 min</text>
+    <text x="72" y="470" fill="#f1efe8" font-size="22">Alfa CTF 2026: #45</text>
+    <text x="72" y="510" fill="#f1efe8" font-size="22">BMSTU IU8 · 5th year</text>
+    <text x="72" y="574" fill="#7f8b95" font-size="18">github.com/ShapArt</text>
+  </g>
+
+  <path d="M72 610H700" stroke="#39444f" stroke-width="2"/>
+  <path d="M72 610H286" stroke="#7dd3fc" stroke-width="3"/>
 </svg>
