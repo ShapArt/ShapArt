@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, profile-editorial-a-clean ]
   pull_request:
 
 jobs:
@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test profile updater
+        run: python -m unittest -v tests.test_update_recently_shipped
       - name: Validate markdown links
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
