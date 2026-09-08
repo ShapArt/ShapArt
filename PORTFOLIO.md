@@ -6,7 +6,7 @@ I build tools around real operational work: approval routes, large matrices, Out
 
 **BMSTU IU8, 5th year · Cherkizovo Group since February 2026 · Python / JavaScript / SQL · Alfa CTF 2026 #45**
 
-[GitHub profile](README.md) · [Resume](RESUME.md) · [Certificates](CERTIFICATES.md) · [HH / RU profile](HH_RU_PROFILE.txt)
+[GitHub profile](README.md) · [Resume](RESUME.md) · [Certificates](CERTIFICATES.md)
 
 ---
 
