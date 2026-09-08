@@ -132,7 +132,6 @@ Keep and link:
 - `PORTFOLIO.md`
 - `RESUME.md`
 - `CERTIFICATES.md`
-- `HH_RU_PROFILE.txt`
 - existing contribution snake workflow/output
 
 The old `assets/profile-hero.svg` can remain in repository history/assets but must no longer be referenced from README.
