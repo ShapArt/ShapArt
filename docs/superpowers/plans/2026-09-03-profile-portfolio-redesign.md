@@ -210,7 +210,7 @@ Start README with the local masthead:
 </p>
 ```
 
-Follow with a short first-person introduction, one target-role sentence and text links to Portfolio, Resume, Certificates, HH RU profile, Telegram and email.
+Follow with a short first-person introduction, one target-role sentence and text links to Portfolio, Resume, Certificates, Telegram and email.
 
 - [ ] **Step 2: Add the proof line**
 

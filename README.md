@@ -12,7 +12,7 @@ I am a 5th-year Computer Security student at **BMSTU IU8** and work with **OpenT
 
 Looking for junior / internship roles in **SIEM/SOC, security automation or AppSec**.
 
-[Portfolio](PORTFOLIO.md) · [Case Notes](https://github.com/ShapArt/cases-and-achievements) · [Resume](RESUME.md) · [Certificates](CERTIFICATES.md) · [HH / RU profile](HH_RU_PROFILE.txt) · [Telegram](https://t.me/shapart) · [Email](mailto:artem.shapovalov2003@gmail.com)
+[Portfolio](PORTFOLIO.md) · [Case Notes](https://github.com/ShapArt/cases-and-achievements) · [Resume](RESUME.md) · [Certificates](CERTIFICATES.md) · [Telegram](https://t.me/shapart) · [Email](mailto:artem.shapovalov2003@gmail.com)
 
 **OpenText bulk work: hours → ~10 min** · **Alfa CTF 2026: #45** · **3+ years in systems / automation before my current role**
 

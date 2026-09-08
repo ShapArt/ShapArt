@@ -90,4 +90,4 @@ Other public work: [EyeGate-L](https://github.com/ShapArt/eyegate-l-luckfox-scud
 - [Теория вероятностей — Stepik](https://stepik.org/cert/2945135)
 - **Skolkovo / Arctic Probe 2020** — engineering-project winner, Arctic buoy prototype
 
-[Full portfolio](PORTFOLIO.md) · [All certificates](CERTIFICATES.md) · [Russian HH master profile](HH_RU_PROFILE.txt)
+[Full portfolio](PORTFOLIO.md) · [All certificates](CERTIFICATES.md)
