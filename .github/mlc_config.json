@@ -1,7 +1,8 @@
 {
   "ignorePatterns": [
     {"pattern": "^mailto:"},
-    {"pattern": "^https://localhost"}
+    {"pattern": "^https://localhost"},
+    {"pattern": "^https://github\\.com/ShapArt/Matrtix-Cleaner(?:/|$)"}
   ],
   "timeout": "20s",
   "retryOn429": true,
