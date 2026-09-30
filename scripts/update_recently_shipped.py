@@ -10,8 +10,22 @@ from urllib.request import Request, urlopen
 START = "<!-- RECENTLY-SHIPPED:START -->"
 END = "<!-- RECENTLY-SHIPPED:END -->"
 
+# GITHUB_TOKEN in this profile repository is intentionally repository-scoped.
+# Matrix Cleaner is private, so its last intentionally published release is
+# pinned here instead of making the scheduled updater fail on a cross-repo 404.
+PINNED_ITEMS = [
+    {
+        "repo": "ShapArt/Matrtix-Cleaner",
+        "name": "Matrix Cleaner",
+        "url": "https://github.com/ShapArt/Matrtix-Cleaner/releases/tag/v12.4.0",
+        "label": "v12.4.0",
+        "date": "2026-09-02",
+        "title": "Matrix Cleaner v12.4.0",
+        "sort_key": "2026-09-02T00:00:00Z",
+    },
+]
+
 REPOSITORIES = [
-    "ShapArt/Matrtix-Cleaner",
     "ShapArt/tessa-matrix-studio",
     "ShapArt/eyegate-l-luckfox-scud",
     "ShapArt/vpn-bot-stars-hiddify",
@@ -124,7 +138,7 @@ def fetch_item(repo: str, token: str | None = None) -> dict:
 def update_readme(path: str = "README.md", token: str | None = None) -> bool:
     readme_path = Path(path)
     before = readme_path.read_text(encoding="utf-8")
-    items = [fetch_item(repo, token) for repo in REPOSITORIES]
+    items = [*PINNED_ITEMS, *(fetch_item(repo, token) for repo in REPOSITORIES)]
     generated = render_items(items)
     after = replace_block(before, generated)
     if after == before:
