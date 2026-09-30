@@ -74,10 +74,10 @@ Deeper project context: [Case Notes](https://github.com/ShapArt/cases-and-achiev
 ## Recent releases
 
 <!-- RECENTLY-SHIPPED:START -->
-- [Matrix Cleaner](https://github.com/ShapArt/Matrtix-Cleaner/releases/tag/v12.4.0) · `v12.4.0` · 2026-09-02
-- [TESSA Matrix Studio](https://github.com/ShapArt/tessa-matrix-studio/releases/tag/v1.9.51) · `v1.9.51` · 2026-09-02
-- [SH4PART VPN](https://github.com/ShapArt/vpn-bot-stars-hiddify/commit/db2f1ff35f5b68772cf2bc17e863bfa0ea3e10e5) · `db2f1ff` · 2026-09-03
+- [TESSA Matrix Studio](https://github.com/ShapArt/tessa-matrix-studio/releases/tag/v1.17.1) · `v1.17.1` · 2026-09-25
 - [EyeGate-L](https://github.com/ShapArt/eyegate-l-luckfox-scud/commit/46f7278f5720d90b35a4b632676a30b6c02dfd17) · `46f7278` · 2026-09-03
+- [SH4PART VPN](https://github.com/ShapArt/vpn-bot-stars-hiddify/commit/db2f1ff35f5b68772cf2bc17e863bfa0ea3e10e5) · `db2f1ff` · 2026-09-03
+- [Matrix Cleaner](https://github.com/ShapArt/Matrtix-Cleaner/releases/tag/v12.4.0) · `v12.4.0` · 2026-09-02
 <!-- RECENTLY-SHIPPED:END -->
 
 Updated automatically from the public repositories above.
